@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import Services from "./pages/Services";
 import Blog from "./pages/Blog";
 import Tools from "./pages/Tools";
+import Contact from "./pages/Contact";
 import CroCalculator from "./pages/CroCalculator";
 import WhatsappGenerator from "./pages/WhatsappGenerator";
 
@@ -23,6 +24,7 @@ const App = () => (
           <Route path="/services" element={<Services />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/tools" element={<Tools />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/tools/cro-calculator" element={<CroCalculator />} />
           <Route path="/tools/whatsapp-generator" element={<WhatsappGenerator />} />
         </Routes>

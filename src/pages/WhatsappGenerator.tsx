@@ -3,7 +3,8 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/components/ui/use-toast";
+import { toast } from "@/hooks/use-toast";
+import { Navigation } from "@/components/Navigation";
 
 const WhatsappGenerator = () => {
   const { toast } = useToast();
@@ -22,6 +23,15 @@ const WhatsappGenerator = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
+    if (!formData.phoneNumber || !formData.message) {
+      toast({
+        title: "Missing Information",
+        description: "Please fill in all required fields",
+        variant: "destructive",
+      });
+      return;
+    }
+
     if (!formData.email) {
       toast({
         title: "Email required",
@@ -40,6 +50,9 @@ const WhatsappGenerator = () => {
       title: "WhatsApp Link Generated!",
       description: "The link has been copied to your clipboard",
     });
+
+    // Open WhatsApp in a new tab
+    window.open(whatsappLink, '_blank');
   };
 
   return (
@@ -49,6 +62,7 @@ const WhatsappGenerator = () => {
       transition={{ duration: 0.5 }}
       className="min-h-screen bg-secondary py-24"
     >
+      <Navigation />
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-12">

@@ -4,6 +4,7 @@ import { Stats } from "@/components/Stats";
 import { Tools } from "@/components/Tools";
 import { Blog } from "@/components/Blog";
 import { Contact } from "@/components/Contact";
+import { Navigation } from "@/components/Navigation";
 import { motion } from "framer-motion";
 
 const Index = () => {
@@ -14,6 +15,7 @@ const Index = () => {
       transition={{ duration: 0.5 }}
       className="min-h-screen bg-secondary"
     >
+      <Navigation />
       <Hero />
       <Services />
       <Stats />
