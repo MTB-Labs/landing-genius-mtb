@@ -1,6 +1,8 @@
 import { Hero } from "@/components/Hero";
 import { Services } from "@/components/Services";
 import { Stats } from "@/components/Stats";
+import { Tools } from "@/components/Tools";
+import { Blog } from "@/components/Blog";
 import { Contact } from "@/components/Contact";
 import { motion } from "framer-motion";
 
@@ -15,6 +17,8 @@ const Index = () => {
       <Hero />
       <Services />
       <Stats />
+      <Tools />
+      <Blog />
       <Contact />
     </motion.div>
   );
