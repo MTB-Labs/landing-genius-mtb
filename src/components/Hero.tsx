@@ -1,0 +1,37 @@
+import { motion } from "framer-motion";
+
+export const Hero = () => {
+  return (
+    <section className="min-h-[80vh] flex items-center justify-center relative overflow-hidden bg-secondary">
+      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d')] bg-cover bg-center opacity-5" />
+      <div className="container mx-auto px-4 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center"
+        >
+          <span className="inline-block px-4 py-1 mb-6 text-sm font-medium bg-accent/10 text-accent rounded-full">
+            CRO & AI Agency
+          </span>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
+            Transform Your E-commerce
+            <br />
+            with AI-Powered Solutions
+          </h1>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
+            We specialize in Shopify development, CRO optimization, and AI
+            integrations to help your business reach its full potential.
+          </p>
+          <motion.button
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            className="bg-primary text-primary-foreground px-8 py-4 rounded-lg text-lg font-medium transition-colors hover:bg-primary/90"
+          >
+            Get Started
+          </motion.button>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
