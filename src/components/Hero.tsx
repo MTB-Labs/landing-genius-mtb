@@ -11,8 +11,15 @@ export const Hero = () => {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <span className="inline-block px-4 py-1 mb-6 text-sm font-medium bg-accent/10 text-accent rounded-full">
-            CRO & AI Agency
+          <div className="flex justify-center mb-8">
+            <img
+              src="/lovable-uploads/7537b699-7205-4677-8d03-4ef5a0b4b3b8.png"
+              alt="MTB Labs"
+              className="h-24 md:h-32"
+            />
+          </div>
+          <span className="inline-block px-4 py-1 mb-6 text-sm font-medium bg-primary/10 text-primary rounded-full">
+            Development Studio
           </span>
           <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
             Transform Your E-commerce
