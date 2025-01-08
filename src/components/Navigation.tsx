@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Home, Tools, BookOpen, MessageSquare } from "lucide-react";
+import { Home, Wrench, BookOpen, MessageSquare } from "lucide-react";
 
 export const Navigation = () => {
   return (
@@ -13,7 +13,7 @@ export const Navigation = () => {
               <span>Home</span>
             </Link>
             <Link to="/tools" className="flex items-center space-x-2 text-gray-600 hover:text-primary">
-              <Tools className="w-4 h-4" />
+              <Wrench className="w-4 h-4" />
               <span>Tools</span>
             </Link>
             <Link to="/blog" className="flex items-center space-x-2 text-gray-600 hover:text-primary">
