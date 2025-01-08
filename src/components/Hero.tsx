@@ -1,6 +1,21 @@
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+import { toast } from "@/hooks/use-toast";
 
 export const Hero = () => {
+  const navigate = useNavigate();
+
+  const handleGetStarted = () => {
+    const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    toast({
+      title: "Let's get started!",
+      description: "Fill out the form below for your free CRO audit.",
+    });
+  };
+
   return (
     <section className="min-h-[80vh] flex items-center justify-center relative overflow-hidden bg-secondary">
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d')] bg-cover bg-center opacity-5" />
@@ -33,6 +48,7 @@ export const Hero = () => {
           <motion.button
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
+            onClick={handleGetStarted}
             className="bg-primary text-primary-foreground px-8 py-4 rounded-lg text-lg font-medium transition-colors hover:bg-primary/90"
           >
             Get Started
