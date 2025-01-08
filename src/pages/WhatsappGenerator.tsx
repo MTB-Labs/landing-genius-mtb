@@ -11,10 +11,10 @@ const WhatsappGenerator = () => {
   const [formData, setFormData] = useState({
     phoneNumber: "",
     message: "",
-    email: "",
   });
 
   const generateWhatsAppLink = () => {
+    // Remove any non-numeric characters from the phone number
     const cleanPhoneNumber = formData.phoneNumber.replace(/\D/g, "");
     const encodedMessage = encodeURIComponent(formData.message);
     return `https://wa.me/${cleanPhoneNumber}?text=${encodedMessage}`;
@@ -23,19 +23,19 @@ const WhatsappGenerator = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!formData.phoneNumber || !formData.message) {
+    if (!formData.phoneNumber) {
       toast({
-        title: "Missing Information",
-        description: "Please fill in all required fields",
+        title: "Missing Phone Number",
+        description: "Please enter a phone number with country code (e.g., +1234567890)",
         variant: "destructive",
       });
       return;
     }
 
-    if (!formData.email) {
+    if (!formData.message) {
       toast({
-        title: "Email required",
-        description: "Please enter your email to generate the link",
+        title: "Missing Message",
+        description: "Please enter a message to send",
         variant: "destructive",
       });
       return;
@@ -44,15 +44,21 @@ const WhatsappGenerator = () => {
     const whatsappLink = generateWhatsAppLink();
     
     // Copy to clipboard
-    navigator.clipboard.writeText(whatsappLink);
-    
-    toast({
-      title: "WhatsApp Link Generated!",
-      description: "The link has been copied to your clipboard",
+    navigator.clipboard.writeText(whatsappLink).then(() => {
+      toast({
+        title: "Link Generated!",
+        description: "The WhatsApp link has been copied to your clipboard",
+      });
+      
+      // Open WhatsApp in a new tab
+      window.open(whatsappLink, '_blank');
+    }).catch(() => {
+      toast({
+        title: "Error",
+        description: "Failed to copy link to clipboard",
+        variant: "destructive",
+      });
     });
-
-    // Open WhatsApp in a new tab
-    window.open(whatsappLink, '_blank');
   };
 
   return (
@@ -95,17 +101,6 @@ const WhatsappGenerator = () => {
                 placeholder="Enter your pre-filled message"
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                required
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium mb-2">Email Address</label>
-              <Input
-                type="email"
-                placeholder="your@email.com"
-                value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 required
               />
             </div>
