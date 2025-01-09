@@ -10,7 +10,13 @@ export const Navigation = () => {
     <nav className="bg-white shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="font-bold text-xl">MTB Labs</Link>
+          <Link to="/" className="flex items-center">
+            <img 
+              src="/lovable-uploads/7537b699-7205-4677-8d03-4ef5a0b4b3b8.png" 
+              alt="MTB Labs" 
+              className="h-8 w-auto"
+            />
+          </Link>
           
           {/* Mobile menu button */}
           <button
