@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Contact as ContactSection } from "@/components/Contact";
 import { Navigation } from "@/components/Navigation";
+import { Footer } from "@/components/Footer";
 
 const Contact = () => {
   return (
@@ -12,6 +13,7 @@ const Contact = () => {
     >
       <Navigation />
       <ContactSection />
+      <Footer />
     </motion.div>
   );
 };

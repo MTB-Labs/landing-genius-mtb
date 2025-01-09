@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import { Blog as BlogSection } from "@/components/Blog";
+import { Navigation } from "@/components/Navigation";
+import { Footer } from "@/components/Footer";
 
 const Blog = () => {
   return (
@@ -9,7 +11,9 @@ const Blog = () => {
       transition={{ duration: 0.5 }}
       className="min-h-screen bg-secondary"
     >
+      <Navigation />
       <BlogSection />
+      <Footer />
     </motion.div>
   );
 };

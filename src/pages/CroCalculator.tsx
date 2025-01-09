@@ -3,6 +3,8 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
+import { Navigation } from "@/components/Navigation";
+import { Footer } from "@/components/Footer";
 
 const CroCalculator = () => {
   const { toast } = useToast();
@@ -53,75 +55,79 @@ const CroCalculator = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="min-h-screen bg-secondary py-24"
+      className="min-h-screen bg-secondary"
     >
-      <div className="container mx-auto px-4">
-        <div className="max-w-2xl mx-auto">
-          <div className="text-center mb-12">
-            <span className="inline-block px-4 py-1 mb-6 text-sm font-medium bg-primary/10 text-primary rounded-full">
-              CRO Calculator
-            </span>
-            <h1 className="text-3xl md:text-4xl font-bold mb-4">
-              Calculate Your Revenue Potential
-            </h1>
-            <p className="text-muted-foreground">
-              See how much revenue you could generate with our CRO optimization services
-            </p>
+      <Navigation />
+      <div className="py-24">
+        <div className="container mx-auto px-4">
+          <div className="max-w-2xl mx-auto">
+            <div className="text-center mb-12">
+              <span className="inline-block px-4 py-1 mb-6 text-sm font-medium bg-primary/10 text-primary rounded-full">
+                CRO Calculator
+              </span>
+              <h1 className="text-3xl md:text-4xl font-bold mb-4">
+                Calculate Your Revenue Potential
+              </h1>
+              <p className="text-muted-foreground">
+                See how much revenue you could generate with our CRO optimization services
+              </p>
+            </div>
+
+            <form onSubmit={handleSubmit} className="space-y-6 bg-white p-8 rounded-lg shadow-sm">
+              <div>
+                <label className="block text-sm font-medium mb-2">Monthly Traffic</label>
+                <Input
+                  type="number"
+                  placeholder="e.g. 10000"
+                  value={formData.traffic}
+                  onChange={(e) => setFormData({ ...formData, traffic: e.target.value })}
+                  required
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium mb-2">Current Conversion Rate (%)</label>
+                <Input
+                  type="number"
+                  step="0.01"
+                  placeholder="e.g. 2.5"
+                  value={formData.conversionRate}
+                  onChange={(e) => setFormData({ ...formData, conversionRate: e.target.value })}
+                  required
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium mb-2">Average Order Value ($)</label>
+                <Input
+                  type="number"
+                  step="0.01"
+                  placeholder="e.g. 75"
+                  value={formData.averageOrderValue}
+                  onChange={(e) => setFormData({ ...formData, averageOrderValue: e.target.value })}
+                  required
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium mb-2">Email Address</label>
+                <Input
+                  type="email"
+                  placeholder="your@email.com"
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  required
+                />
+              </div>
+
+              <Button type="submit" className="w-full">
+                Calculate Potential Revenue
+              </Button>
+            </form>
           </div>
-
-          <form onSubmit={handleSubmit} className="space-y-6 bg-white p-8 rounded-lg shadow-sm">
-            <div>
-              <label className="block text-sm font-medium mb-2">Monthly Traffic</label>
-              <Input
-                type="number"
-                placeholder="e.g. 10000"
-                value={formData.traffic}
-                onChange={(e) => setFormData({ ...formData, traffic: e.target.value })}
-                required
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium mb-2">Current Conversion Rate (%)</label>
-              <Input
-                type="number"
-                step="0.01"
-                placeholder="e.g. 2.5"
-                value={formData.conversionRate}
-                onChange={(e) => setFormData({ ...formData, conversionRate: e.target.value })}
-                required
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium mb-2">Average Order Value ($)</label>
-              <Input
-                type="number"
-                step="0.01"
-                placeholder="e.g. 75"
-                value={formData.averageOrderValue}
-                onChange={(e) => setFormData({ ...formData, averageOrderValue: e.target.value })}
-                required
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium mb-2">Email Address</label>
-              <Input
-                type="email"
-                placeholder="your@email.com"
-                value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                required
-              />
-            </div>
-
-            <Button type="submit" className="w-full">
-              Calculate Potential Revenue
-            </Button>
-          </form>
         </div>
       </div>
+      <Footer />
     </motion.div>
   );
 };

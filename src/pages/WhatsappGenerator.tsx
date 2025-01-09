@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Navigation } from "@/components/Navigation";
+import { Footer } from "@/components/Footer";
 
 const WhatsappGenerator = () => {
   const { toast } = useToast();
@@ -14,7 +15,6 @@ const WhatsappGenerator = () => {
   });
 
   const generateWhatsAppLink = () => {
-    // Remove any non-numeric characters from the phone number
     const cleanPhoneNumber = formData.phoneNumber.replace(/\D/g, "");
     const encodedMessage = encodeURIComponent(formData.message);
     return `https://wa.me/${cleanPhoneNumber}?text=${encodedMessage}`;
@@ -43,14 +43,12 @@ const WhatsappGenerator = () => {
 
     const whatsappLink = generateWhatsAppLink();
     
-    // Copy to clipboard
     navigator.clipboard.writeText(whatsappLink).then(() => {
       toast({
         title: "Link Generated!",
         description: "The WhatsApp link has been copied to your clipboard",
       });
       
-      // Open WhatsApp in a new tab
       window.open(whatsappLink, '_blank');
     }).catch(() => {
       toast({
@@ -111,6 +109,7 @@ const WhatsappGenerator = () => {
           </form>
         </div>
       </div>
+      <Footer />
     </motion.div>
   );
 };
