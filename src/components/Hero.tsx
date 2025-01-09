@@ -20,6 +20,10 @@ export const Hero = () => {
     { name: "Shopify Plus", logo: "https://cdn.shopify.com/s/files/1/0070/7032/files/shopify-plus-logo.png" },
     { name: "BigCommerce", logo: "https://www.bigcommerce.com/assets/logos/bc-logo-dark.svg" },
     { name: "WooCommerce", logo: "https://woocommerce.com/wp-content/themes/woo/images/logo-woocommerce.svg" },
+    // Duplicate logos for continuous scroll effect
+    { name: "Shopify Plus", logo: "https://cdn.shopify.com/s/files/1/0070/7032/files/shopify-plus-logo.png" },
+    { name: "BigCommerce", logo: "https://www.bigcommerce.com/assets/logos/bc-logo-dark.svg" },
+    { name: "WooCommerce", logo: "https://woocommerce.com/wp-content/themes/woo/images/logo-woocommerce.svg" },
   ];
 
   return (
@@ -68,16 +72,18 @@ export const Hero = () => {
             className="mt-16 pt-8 border-t border-gray-200"
           >
             <p className="text-sm text-gray-500 mb-6">Trusted by leading e-commerce platforms</p>
-            <div className="flex flex-wrap justify-center items-center gap-8 opacity-70">
-              {clients.map((client) => (
-                <motion.img
-                  key={client.name}
-                  src={client.logo}
-                  alt={client.name}
-                  className="h-8 md:h-10 w-auto grayscale hover:grayscale-0 transition-all"
-                  whileHover={{ scale: 1.05 }}
-                />
-              ))}
+            <div className="relative overflow-hidden">
+              <div className="flex items-center gap-8 animate-[marquee_20s_linear_infinite] hover:[animation-play-state:paused]">
+                {clients.map((client, index) => (
+                  <motion.img
+                    key={`${client.name}-${index}`}
+                    src={client.logo}
+                    alt={client.name}
+                    className="h-8 md:h-10 w-auto grayscale hover:grayscale-0 transition-all flex-shrink-0"
+                    whileHover={{ scale: 1.05 }}
+                  />
+                ))}
+              </div>
             </div>
           </motion.div>
         </motion.div>
