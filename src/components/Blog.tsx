@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Plus } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
 import { blogPosts } from "@/data/blogPosts";
@@ -19,12 +19,6 @@ export const Blog = () => {
             Stay updated with the latest trends and strategies in CRO, development,
             and AI
           </p>
-          <Link to="/blog/new">
-            <Button>
-              <Plus className="w-4 h-4 mr-2" />
-              Create New Post
-            </Button>
-          </Link>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {blogPosts.map((post, index) => (
