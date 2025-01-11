@@ -17,13 +17,18 @@ export const Hero = () => {
   };
 
   const clients = [
-    { name: "Shopify Plus", logo: "https://cdn.shopify.com/s/files/1/0070/7032/files/shopify-plus-logo.png" },
-    { name: "BigCommerce", logo: "https://www.bigcommerce.com/assets/logos/bc-logo-dark.svg" },
-    { name: "WooCommerce", logo: "https://woocommerce.com/wp-content/themes/woo/images/logo-woocommerce.svg" },
-    // Duplicate logos for continuous scroll effect
-    { name: "Shopify Plus", logo: "https://cdn.shopify.com/s/files/1/0070/7032/files/shopify-plus-logo.png" },
-    { name: "BigCommerce", logo: "https://www.bigcommerce.com/assets/logos/bc-logo-dark.svg" },
-    { name: "WooCommerce", logo: "https://woocommerce.com/wp-content/themes/woo/images/logo-woocommerce.svg" },
+    { 
+      name: "Shopify Plus", 
+      logo: "/lovable-uploads/shopify.svg" 
+    },
+    { 
+      name: "BigCommerce", 
+      logo: "/lovable-uploads/bigcommerce.svg"
+    },
+    { 
+      name: "WooCommerce", 
+      logo: "/lovable-uploads/woocommerce.svg"
+    },
   ];
 
   return (
