@@ -10,6 +10,12 @@ import Tools from "./pages/Tools";
 import Contact from "./pages/Contact";
 import CroCalculator from "./pages/CroCalculator";
 import WhatsappGenerator from "./pages/WhatsappGenerator";
+import ShopifyDevelopment from "./pages/services/ShopifyDevelopment";
+import CroOptimization from "./pages/services/CroOptimization";
+import AiIntegration from "./pages/services/AiIntegration";
+import CustomDevelopment from "./pages/services/CustomDevelopment";
+import AnalyticsTracking from "./pages/services/AnalyticsTracking";
+import UiUxDesign from "./pages/services/UiUxDesign";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +33,12 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/tools/cro-calculator" element={<CroCalculator />} />
           <Route path="/tools/whatsapp-generator" element={<WhatsappGenerator />} />
+          <Route path="/services/shopify-development" element={<ShopifyDevelopment />} />
+          <Route path="/services/cro-optimization" element={<CroOptimization />} />
+          <Route path="/services/ai-integration" element={<AiIntegration />} />
+          <Route path="/services/custom-development" element={<CustomDevelopment />} />
+          <Route path="/services/analytics-tracking" element={<AnalyticsTracking />} />
+          <Route path="/services/ui-ux-design" element={<UiUxDesign />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
