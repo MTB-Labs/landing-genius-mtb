@@ -20,15 +20,15 @@ export const Hero = () => {
   const clients = [
     { 
       name: "Shopify Plus", 
-      logo: "/lovable-uploads/shopify.svg" 
+      logo: "/placeholder.svg" 
     },
     { 
       name: "BigCommerce", 
-      logo: "/lovable-uploads/bigcommerce.svg"
+      logo: "/placeholder.svg"
     },
     { 
       name: "WooCommerce", 
-      logo: "/lovable-uploads/woocommerce.svg"
+      logo: "/placeholder.svg"
     },
   ];
 
