@@ -4,6 +4,7 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { Pricing } from "@/components/Pricing";
 
 const features = [
   "Custom Shopify theme development",
@@ -14,6 +15,49 @@ const features = [
   "Custom functionality development",
   "Payment gateway integration",
   "Multi-currency support",
+];
+
+const pricingTiers = [
+  {
+    name: "Basic Store",
+    price: "$2,999",
+    description: "Perfect for small businesses starting their e-commerce journey",
+    features: [
+      "Custom Theme Setup",
+      "Mobile Responsive Design",
+      "Basic SEO Setup",
+      "Payment Gateway Integration",
+      "Basic Product Setup",
+      "30 Days Support"
+    ]
+  },
+  {
+    name: "Growth",
+    price: "$4,999",
+    description: "Ideal for growing businesses needing advanced features",
+    features: [
+      "Everything in Basic",
+      "Advanced SEO Optimization",
+      "Multi-currency Support",
+      "Custom Functionality",
+      "Advanced Analytics",
+      "60 Days Support"
+    ],
+    highlight: true
+  },
+  {
+    name: "Enterprise",
+    price: "POA",
+    description: "For large businesses requiring complex solutions",
+    features: [
+      "Everything in Growth",
+      "Custom API Integration",
+      "Advanced Security",
+      "Dedicated Support",
+      "Performance Optimization",
+      "Custom Features"
+    ]
+  }
 ];
 
 const ShopifyDevelopment = () => {
@@ -58,7 +102,7 @@ const ShopifyDevelopment = () => {
           </div>
         </div>
       </section>
-
+      
       {/* Features Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -86,6 +130,12 @@ const ShopifyDevelopment = () => {
           </div>
         </div>
       </section>
+
+      <Pricing
+        title="Shopify Development Pricing"
+        description="Choose the perfect plan for your business needs"
+        tiers={pricingTiers}
+      />
 
       {/* Process Section */}
       <section className="py-20 bg-gray-50">

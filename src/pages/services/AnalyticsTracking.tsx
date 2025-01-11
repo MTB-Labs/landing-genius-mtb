@@ -4,6 +4,7 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { Pricing } from "@/components/Pricing";
 
 const features = [
   "Google Analytics Setup",
@@ -14,6 +15,49 @@ const features = [
   "Custom Dashboard Creation",
   "Data Visualization",
   "Performance Monitoring",
+];
+
+const pricingTiers = [
+  {
+    name: "Basic",
+    price: "$999/mo",
+    description: "Essential analytics tracking setup",
+    features: [
+      "Google Analytics Setup",
+      "Basic Event Tracking",
+      "Monthly Reports",
+      "Basic Dashboard",
+      "Data Collection",
+      "Email Support"
+    ]
+  },
+  {
+    name: "Advanced",
+    price: "$1,999/mo",
+    description: "Comprehensive analytics solution",
+    features: [
+      "Everything in Basic",
+      "Custom Event Tracking",
+      "Weekly Reports",
+      "Custom Dashboards",
+      "Advanced Analysis",
+      "Priority Support"
+    ],
+    highlight: true
+  },
+  {
+    name: "Enterprise",
+    price: "POA",
+    description: "Enterprise-grade analytics solution",
+    features: [
+      "Everything in Advanced",
+      "Custom Integration",
+      "Real-time Reports",
+      "Multiple Dashboards",
+      "AI-Powered Analysis",
+      "24/7 Support"
+    ]
+  }
 ];
 
 const AnalyticsTracking = () => {
@@ -57,7 +101,7 @@ const AnalyticsTracking = () => {
           </div>
         </div>
       </section>
-
+      
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -84,6 +128,12 @@ const AnalyticsTracking = () => {
           </div>
         </div>
       </section>
+
+      <Pricing
+        title="Analytics & Tracking Pricing"
+        description="Choose the analytics package that fits your needs"
+        tiers={pricingTiers}
+      />
 
       <Footer />
     </div>

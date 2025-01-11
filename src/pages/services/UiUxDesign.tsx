@@ -4,6 +4,7 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { Pricing } from "@/components/Pricing";
 
 const features = [
   "User Interface Design",
@@ -14,6 +15,49 @@ const features = [
   "Design Systems",
   "Visual Design",
   "Usability Testing",
+];
+
+const pricingTiers = [
+  {
+    name: "Essential",
+    price: "$3,999",
+    description: "Perfect for small projects and startups",
+    features: [
+      "UI Design",
+      "Wireframing",
+      "Basic Prototyping",
+      "2 Revisions",
+      "Basic Style Guide",
+      "14 Days Support"
+    ]
+  },
+  {
+    name: "Professional",
+    price: "$7,999",
+    description: "Comprehensive design solution",
+    features: [
+      "Everything in Essential",
+      "UX Research",
+      "Advanced Prototyping",
+      "5 Revisions",
+      "Complete Style Guide",
+      "30 Days Support"
+    ],
+    highlight: true
+  },
+  {
+    name: "Enterprise",
+    price: "POA",
+    description: "Custom design solutions for large projects",
+    features: [
+      "Everything in Professional",
+      "Full UX Research",
+      "Design System",
+      "Unlimited Revisions",
+      "Brand Guidelines",
+      "90 Days Support"
+    ]
+  }
 ];
 
 const UiUxDesign = () => {
@@ -84,6 +128,12 @@ const UiUxDesign = () => {
           </div>
         </div>
       </section>
+
+      <Pricing
+        title="UI/UX Design Pricing"
+        description="Select the design package that matches your vision"
+        tiers={pricingTiers}
+      />
 
       <Footer />
     </div>

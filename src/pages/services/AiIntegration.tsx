@@ -4,6 +4,7 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { Pricing } from "@/components/Pricing";
 
 const features = [
   "AI-Powered Product Recommendations",
@@ -14,6 +15,49 @@ const features = [
   "Natural Language Processing",
   "Machine Learning Models",
   "AI-Driven Marketing Automation",
+];
+
+const pricingTiers = [
+  {
+    name: "Basic AI",
+    price: "$1,999/mo",
+    description: "Essential AI integration for small businesses",
+    features: [
+      "Chatbot Integration",
+      "Basic Automation",
+      "Customer Support AI",
+      "Monthly Updates",
+      "Basic Analytics",
+      "Email Support"
+    ]
+  },
+  {
+    name: "Advanced AI",
+    price: "$3,999/mo",
+    description: "Comprehensive AI solutions for growing businesses",
+    features: [
+      "Everything in Basic",
+      "Custom AI Models",
+      "Advanced Automation",
+      "Weekly Updates",
+      "Advanced Analytics",
+      "Priority Support"
+    ],
+    highlight: true
+  },
+  {
+    name: "Enterprise AI",
+    price: "POA",
+    description: "Custom AI solutions for enterprise needs",
+    features: [
+      "Everything in Advanced",
+      "Custom Development",
+      "Full Integration",
+      "Daily Updates",
+      "Real-time Analytics",
+      "24/7 Support"
+    ]
+  }
 ];
 
 const AiIntegration = () => {
@@ -84,6 +128,12 @@ const AiIntegration = () => {
           </div>
         </div>
       </section>
+
+      <Pricing
+        title="AI Integration Pricing"
+        description="Choose the AI solution that matches your business needs"
+        tiers={pricingTiers}
+      />
 
       <Footer />
     </div>

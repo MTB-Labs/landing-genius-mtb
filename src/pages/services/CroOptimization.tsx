@@ -4,6 +4,7 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { Pricing } from "@/components/Pricing";
 
 const features = [
   "A/B Testing Implementation",
@@ -14,6 +15,49 @@ const features = [
   "Personalization Strategies",
   "Analytics Integration",
   "Continuous Performance Monitoring",
+];
+
+const pricingTiers = [
+  {
+    name: "Starter",
+    price: "$1,499/mo",
+    description: "Essential CRO tools and strategies",
+    features: [
+      "A/B Testing Setup",
+      "Basic Analytics Integration",
+      "Monthly Reports",
+      "2 Test Variations",
+      "Basic Heat Mapping",
+      "Email Support"
+    ]
+  },
+  {
+    name: "Professional",
+    price: "$2,999/mo",
+    description: "Advanced optimization for growing businesses",
+    features: [
+      "Everything in Starter",
+      "Advanced Analytics",
+      "Weekly Reports",
+      "5 Test Variations",
+      "Session Recordings",
+      "Priority Support"
+    ],
+    highlight: true
+  },
+  {
+    name: "Enterprise",
+    price: "POA",
+    description: "Custom solutions for large-scale operations",
+    features: [
+      "Everything in Professional",
+      "Custom Integration",
+      "Daily Reports",
+      "Unlimited Tests",
+      "AI-Powered Insights",
+      "Dedicated Support"
+    ]
+  }
 ];
 
 const CroOptimization = () => {
@@ -57,7 +101,7 @@ const CroOptimization = () => {
           </div>
         </div>
       </section>
-
+      
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -84,6 +128,12 @@ const CroOptimization = () => {
           </div>
         </div>
       </section>
+
+      <Pricing
+        title="CRO Optimization Pricing"
+        description="Select the plan that best fits your optimization needs"
+        tiers={pricingTiers}
+      />
 
       <Footer />
     </div>

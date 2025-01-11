@@ -4,6 +4,7 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { Pricing } from "@/components/Pricing";
 
 const features = [
   "Custom E-commerce Solutions",
@@ -14,6 +15,49 @@ const features = [
   "Performance Optimization",
   "Security Implementation",
   "Scalable Architecture Design",
+];
+
+const pricingTiers = [
+  {
+    name: "Starter",
+    price: "$5,999",
+    description: "Basic custom development solutions",
+    features: [
+      "Requirements Analysis",
+      "Custom Development",
+      "Basic Integration",
+      "Testing & QA",
+      "Basic Documentation",
+      "30 Days Support"
+    ]
+  },
+  {
+    name: "Professional",
+    price: "$9,999",
+    description: "Advanced development for complex needs",
+    features: [
+      "Everything in Starter",
+      "Advanced Integration",
+      "API Development",
+      "Performance Optimization",
+      "Detailed Documentation",
+      "90 Days Support"
+    ],
+    highlight: true
+  },
+  {
+    name: "Enterprise",
+    price: "POA",
+    description: "Full-scale custom development solutions",
+    features: [
+      "Everything in Professional",
+      "Enterprise Architecture",
+      "Scalability Planning",
+      "Security Hardening",
+      "Complete Documentation",
+      "Ongoing Support"
+    ]
+  }
 ];
 
 const CustomDevelopment = () => {
@@ -84,6 +128,12 @@ const CustomDevelopment = () => {
           </div>
         </div>
       </section>
+
+      <Pricing
+        title="Custom Development Pricing"
+        description="Select the development package that suits your needs"
+        tiers={pricingTiers}
+      />
 
       <Footer />
     </div>
