@@ -6,9 +6,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ScrollToTop } from "./components/ScrollToTop";
 import Index from "./pages/Index";
 import Services from "./pages/Services";
-import Blog from "./pages/Blog";
-import BlogPost from "./pages/BlogPost";
-import NewBlogPost from "./pages/NewBlogPost";
 import Contact from "./pages/Contact";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import ShopifyDevelopment from "./pages/services/ShopifyDevelopment";
@@ -30,9 +27,6 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/services" element={<Services />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:id" element={<BlogPost />} />
-          <Route path="/blog/new" element={<NewBlogPost />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/services/shopify-development" element={<ShopifyDevelopment />} />
