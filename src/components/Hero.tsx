@@ -162,16 +162,15 @@ export const Hero = () => {
                     type: "spring",
                     stiffness: 100
                   }}
-                  className="flex flex-col items-center space-y-2"
+                  className="flex items-center justify-center"
                 >
-                  <div className="w-auto h-[75px] flex items-center justify-center">
+                  <div className="w-[145px] h-[75px] flex items-center justify-center">
                     <img 
                       src={client.logo}
                       alt={client.name}
                       className="h-full w-auto object-contain filter hover:brightness-110 transition-all duration-300"
                     />
                   </div>
-                  <span className="text-sm text-gray-600">{client.name}</span>
                 </motion.div>
               ))}
             </div>
