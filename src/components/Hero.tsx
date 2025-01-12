@@ -1,16 +1,6 @@
 import { motion } from "framer-motion";
 import { toast } from "@/hooks/use-toast";
-import { 
-  ArrowRight, 
-  Mail, // Klaviyo
-  ShoppingBag, // Shopify
-  Brain, // Intelligems
-  Building2, // GoHighLevel
-  Cloud, // Vapi
-  ShoppingCart, // BuyWithPrime
-  RefreshCw, // Rebuy
-  Star // Yotpo
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export const Hero = () => {
   const handleGetStarted = () => {
@@ -27,42 +17,42 @@ export const Hero = () => {
   const clients = [
     { 
       name: "Klaviyo Partners",
-      icon: Mail,
+      logo: "/logos/klaviyo.svg",
       delay: 0
     },
     { 
       name: "Shopify Partners",
-      icon: ShoppingBag,
+      logo: "/logos/shopify.svg",
       delay: 0.1
     },
     { 
       name: "Intelligems",
-      icon: Brain,
+      logo: "/logos/intelligems.svg",
       delay: 0.2
     },
     { 
       name: "GoHighLevel",
-      icon: Building2,
+      logo: "/logos/gohighlevel.svg",
       delay: 0.3
     },
     { 
       name: "Vapi",
-      icon: Cloud,
+      logo: "/logos/vapi.svg",
       delay: 0.4
     },
     { 
       name: "BuyWithPrime",
-      icon: ShoppingCart,
+      logo: "/logos/buywithprime.svg",
       delay: 0.5
     },
     { 
       name: "Rebuy",
-      icon: RefreshCw,
+      logo: "/logos/rebuy.svg",
       delay: 0.6
     },
     { 
       name: "Yotpo",
-      icon: Star,
+      logo: "/logos/yotpo.svg",
       delay: 0.7
     }
   ];
@@ -126,29 +116,27 @@ export const Hero = () => {
           </p>
           <div className="relative overflow-hidden">
             <div className="flex space-x-16 animate-marquee">
-              {scrollClients.map((client, index) => {
-                const Icon = client.icon;
-                return (
-                  <motion.div
-                    key={`${client.name}-${index}`}
-                    initial={{ opacity: 0, scale: 0.5 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ 
-                      duration: 0.5,
-                      delay: client.delay,
-                      type: "spring",
-                      stiffness: 100
-                    }}
-                    className="flex flex-col items-center space-y-2"
-                  >
-                    <Icon 
-                      className="h-12 w-12 text-primary/70 hover:text-primary transition-colors"
-                      strokeWidth={1.5}
-                    />
-                    <span className="text-sm text-gray-600">{client.name}</span>
-                  </motion.div>
-                );
-              })}
+              {scrollClients.map((client, index) => (
+                <motion.div
+                  key={`${client.name}-${index}`}
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ 
+                    duration: 0.5,
+                    delay: client.delay,
+                    type: "spring",
+                    stiffness: 100
+                  }}
+                  className="flex flex-col items-center space-y-2"
+                >
+                  <img 
+                    src={client.logo}
+                    alt={client.name}
+                    className="h-12 w-auto filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                  <span className="text-sm text-gray-600">{client.name}</span>
+                </motion.div>
+              ))}
             </div>
           </div>
         </div>
