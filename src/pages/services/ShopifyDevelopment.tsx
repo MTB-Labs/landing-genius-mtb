@@ -19,55 +19,47 @@ const features = [
 
 const pricingTiers = [
   {
-    name: "Standard Development",
-    price: "Starting from $2k",
-    description: "4-5 weeks. Perfect for small to medium-sized businesses looking to establish their Shopify presence.",
+    name: "Hourly Rate / Retainer",
+    price: "$50 per hour",
+    description: "Need us to implement a new application or build a custom app, we got you.",
     features: [
-      "Premium Theme Setup & Customization",
-      "Product Setup & Configuration",
-      "Payment Gateway Integration",
-      "Basic SEO Setup",
-      "Basic Training Session",
-      "30 Days Support"
+      "Let's scope out what you need and create a plan of action",
+      "Minimum 20 hour engagement",
+      "Reviews App Integration (Okendo, Yotpo)",
+      "Team Training",
+      "Ongoing Support Available"
     ]
   },
   {
-    name: "Premium Development",
-    price: "Starting from $5k",
-    description: "6-8 weeks. Ideal for growing businesses needing custom functionality and advanced features.",
+    name: "Theme Setup / Augmentation",
+    price: "$15k-50k",
+    description: "Starting with a theme, you'll work side by side with our UX designer to make changes to the brand.",
     features: [
-      "Everything in Standard Development",
-      "Custom Functionality Development",
-      "Advanced Apps Integration",
-      "Performance Optimization",
-      "Advanced SEO Setup",
-      "60 Days Support"
+      "Theme Installation & Store Setup",
+      "Partial Custom Design for 3 key pages",
+      "Custom Functionality (Optional)",
+      "Add 3 Apps (e.g. Gorgias, ReCharge etc)",
+      "Klaviyo Setup & Automation Flows"
     ],
     highlight: true
   },
   {
-    name: "Enterprise Development",
-    price: "Starting from $7.5k",
-    description: "8-12 weeks. Comprehensive development solution for large stores with complex requirements.",
+    name: "Fully Custom Development",
+    price: "POA /16-20wks",
+    description: "Starting with a theme, you'll work side by side with our UX designer to make changes to the brand.",
     features: [
-      "Everything in Premium Development",
-      "Custom Development",
-      "Advanced Integrations",
-      "Multi-currency Setup",
-      "Enterprise Security Features",
-      "90 Days Priority Support"
+      "Dedicated UX Designer",
+      "Fully Custom Development",
+      "Custom Functionality",
+      "Fully Custom Development",
+      "Bloomreach or Klaviyo Integration"
     ]
   }
 ];
 
 const ShopifyDevelopment = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      className="min-h-screen bg-secondary"
-    >
+    <div className="min-h-screen bg-secondary">
       <Navigation />
       
       <section className="relative py-20 overflow-hidden bg-gradient-to-b from-primary/10 to-transparent">
@@ -109,10 +101,10 @@ const ShopifyDevelopment = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Comprehensive Shopify Solutions
+              Our Development Process
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              We deliver end-to-end Shopify development services to help your business thrive in the digital marketplace.
+              We follow a proven development process that ensures your store's functionality and performance meet the highest standards.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -133,13 +125,13 @@ const ShopifyDevelopment = () => {
       </section>
 
       <Pricing
-        title="Shopify Development Packages"
-        description="Select the development package that best fits your business needs"
+        title="Development Packages"
+        description="Choose the right development package that best fits your business needs"
         tiers={pricingTiers}
       />
 
       <Footer />
-    </motion.div>
+    </div>
   );
 };
 
