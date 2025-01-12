@@ -19,48 +19,53 @@ const features = [
 
 const pricingTiers = [
   {
-    name: "Basic Migration",
-    price: "$999",
-    description: "Perfect for small stores with basic needs",
+    name: "Standard Migration",
+    price: "$2,499",
+    description: "Perfect for small to medium-sized stores",
     features: [
-      "Up to 500 products",
-      "Basic product data migration",
-      "Customer data transfer",
+      "Up to 10,000 products",
+      "Product data & images migration",
+      "Customer data migration",
       "Order history migration",
-      "Basic 301 redirects",
-      "14 days of email support"
+      "Basic 301 redirects setup",
+      "Basic theme setup",
+      "30 days of support"
     ]
   },
   {
-    name: "Professional",
-    price: "$1,999",
-    description: "Ideal for growing businesses",
+    name: "Premium Migration",
+    price: "$4,999",
+    description: "Ideal for larger stores with custom needs",
     features: [
-      "Up to 5000 products",
+      "Up to 100,000 products",
       "Full product data migration",
-      "Complete customer & order history",
-      "Advanced SEO preservation",
+      "Complete customer migration",
+      "Full order history transfer",
       "Custom 301 redirects mapping",
-      "Theme setup & customization",
-      "30 days of priority support"
+      "Advanced theme customization",
+      "Custom field mapping",
+      "60 days of priority support"
     ],
     highlight: true
   },
   {
-    name: "Enterprise",
+    name: "Enterprise Migration",
     price: "Custom",
-    description: "For large-scale operations",
+    description: "For complex, high-volume stores",
     features: [
       "Unlimited products",
       "Custom data migration",
-      "Full historical data transfer",
-      "Advanced SEO optimization",
+      "Complex customer data transfer",
+      "Full historical data migration",
+      "Advanced SEO preservation",
       "Custom integrations migration",
-      "Premium theme customization",
-      "90 days of dedicated support"
+      "Dedicated project manager",
+      "90 days of premium support"
     ]
   }
 ];
+
+// ... keep existing code (features and component structure remain the same)
 
 const WooCommerceToShopify = () => {
   return (
