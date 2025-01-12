@@ -76,14 +76,14 @@ const WooCommerceToShopify = () => {
               transition={{ duration: 0.5 }}
             >
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Migrate from WooCommerce to Shopify with Confidence
+                WooCommerce to Shopify Migration Service
               </h1>
               <p className="text-lg text-gray-600 mb-8">
-                Experience a seamless transition to Shopify with our expert migration service. We handle everything from product data to customer information, ensuring zero data loss and minimal disruption to your business operations.
+                Seamlessly migrate your WooCommerce store to Shopify with our expert migration service. We ensure zero data loss and minimal downtime during the transition.
               </p>
               <Button asChild size="lg">
                 <Link to="/contact" className="inline-flex items-center">
-                  Start Your Migration Journey
+                  Start Your Migration
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
@@ -108,10 +108,10 @@ const WooCommerceToShopify = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Comprehensive Migration Process
+              Our Migration Process
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Our battle-tested migration process ensures a smooth transition to Shopify while maintaining your store's functionality, SEO rankings, and customer data integrity.
+              We follow a proven migration process that ensures your store's data integrity and functionality are maintained throughout the transition.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -138,7 +138,7 @@ const WooCommerceToShopify = () => {
               Why Choose Our Migration Service?
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              With over 500+ successful migrations completed, our team has the expertise to handle your transition with precision and care.
+              With years of experience in e-commerce migrations, we ensure a smooth transition to Shopify while maintaining your business continuity.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -147,9 +147,9 @@ const WooCommerceToShopify = () => {
               whileInView={{ opacity: 1, y: 0 }}
               className="bg-white p-8 rounded-lg shadow-sm"
             >
-              <h3 className="text-xl font-semibold mb-4">Guaranteed Data Security</h3>
+              <h3 className="text-xl font-semibold mb-4">Expert Migration Team</h3>
               <p className="text-gray-600">
-                Your data is handled with the utmost care. We use secure protocols and maintain data integrity throughout the migration process.
+                Our experienced team has successfully migrated hundreds of stores from WooCommerce to Shopify.
               </p>
             </motion.div>
             <motion.div
@@ -158,9 +158,9 @@ const WooCommerceToShopify = () => {
               transition={{ delay: 0.1 }}
               className="bg-white p-8 rounded-lg shadow-sm"
             >
-              <h3 className="text-xl font-semibold mb-4">Business Continuity</h3>
+              <h3 className="text-xl font-semibold mb-4">Zero Data Loss</h3>
               <p className="text-gray-600">
-                Our migration process is designed to minimize downtime. Your store remains operational while we prepare the new Shopify setup.
+                We ensure all your products, customers, and order history are transferred accurately to your new Shopify store.
               </p>
             </motion.div>
             <motion.div
@@ -169,9 +169,9 @@ const WooCommerceToShopify = () => {
               transition={{ delay: 0.2 }}
               className="bg-white p-8 rounded-lg shadow-sm"
             >
-              <h3 className="text-xl font-semibold mb-4">SEO Performance</h3>
+              <h3 className="text-xl font-semibold mb-4">Minimal Downtime</h3>
               <p className="text-gray-600">
-                We implement proper URL structures and redirects to maintain your search rankings and organic traffic during the transition.
+                Our migration process is designed to keep your store operational throughout the transition period.
               </p>
             </motion.div>
           </div>
@@ -179,7 +179,7 @@ const WooCommerceToShopify = () => {
       </section>
 
       <Pricing
-        title="Migration Service Packages"
+        title="Migration Packages"
         description="Choose the right migration package for your business size and needs"
         tiers={pricingTiers}
       />
