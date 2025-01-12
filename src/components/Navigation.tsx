@@ -87,7 +87,7 @@ export const Navigation = () => {
               <NavigationMenuList>
                 <NavigationMenuItem>
                   <NavigationMenuTrigger 
-                    className="flex items-center space-x-2 text-gray-600 hover:text-primary hover:bg-muted rounded-md h-10 px-4 transition-colors"
+                    className="flex items-center space-x-2 text-gray-600 hover:text-primary hover:bg-muted data-[state=open]:text-primary data-[state=open]:bg-muted rounded-md h-10 px-4 transition-colors"
                   >
                     <Briefcase className="w-4 h-4" />
                     <span>Services</span>
