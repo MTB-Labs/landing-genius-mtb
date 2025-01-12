@@ -20,48 +20,33 @@ const features = [
 const pricingTiers = [
   {
     name: "Starter Package",
-    price: "$1,500/mo",
-    description: "Essential CRO package for small businesses looking to start optimizing their conversion rates.",
+    price: "$2,500/mo",
+    description: "Essential CRO package for businesses looking to improve their conversion rates with data-driven decisions.",
     features: [
-      "1 A/B Test at a time",
+      "2 A/B Tests running simultaneously",
       "Up to 2 pages optimization",
-      "1 Landing page development per month",
       "Basic Analytics Setup",
+      "Heatmap & Session Recording",
+      "User Behavior Tracking",
       "Weekly Performance Reports",
-      "Heatmap Analysis",
-      "User Behavior Tracking"
+      "Monthly Strategy Session"
     ]
   },
   {
     name: "Growth Package",
-    price: "$3,500/mo",
-    description: "Comprehensive CRO solution for growing businesses seeking significant conversion improvements.",
-    features: [
-      "2 A/B Tests running simultaneously",
-      "Up to 5 pages optimization",
-      "2 Landing pages per month",
-      "Advanced Analytics Integration",
-      "Heatmap & Session Recording",
-      "Conversion Funnel Analysis",
-      "Monthly Strategy Sessions",
-      "Priority Support"
-    ],
-    highlight: true
-  },
-  {
-    name: "Enterprise Package",
-    price: "Custom",
-    description: "Full-scale optimization and development for large businesses with complex needs.",
+    price: "$4,500/mo",
+    description: "Advanced CRO solution with custom development capabilities for growing businesses.",
     features: [
       "3 A/B Tests running simultaneously",
-      "Full Website Optimization",
-      "3 Landing pages per month",
-      "Custom Analytics Dashboard",
-      "Advanced Personalization",
-      "Dedicated CRO Specialist",
+      "Up to 3 pages optimization",
+      "Custom Development Tasks",
+      "Advanced Analytics Integration",
+      "Conversion Funnel Analysis",
       "Weekly Strategy Sessions",
-      "24/7 Priority Support"
-    ]
+      "Priority Support",
+      "Dedicated CRO Specialist"
+    ],
+    highlight: true
   }
 ];
 
