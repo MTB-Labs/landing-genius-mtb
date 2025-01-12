@@ -19,40 +19,40 @@ const features = [
 
 const pricingTiers = [
   {
-    name: "Quick Launch",
-    price: "$15k",
-    description: "4-5 weeks. We'll work together and pick a theme that matches the brand and provide a full set-up with a tailored growth plan.",
+    name: "Standard Migration",
+    price: "Starting from $2k",
+    description: "4-5 weeks. Perfect for small to medium-sized stores looking to migrate to Shopify with essential features and support.",
     features: [
       "Shopify Premium Theme Setup",
       "Customer and Product Data Migration",
-      "Klaviyo Setup - 3x Automation Flows",
+      "Basic SEO Redirects",
       "Reviews App Integration",
       "Team Training"
     ]
   },
   {
-    name: "Augmentation",
-    price: "$25k",
-    description: "6-8 weeks. Starting with a theme, you'll work side by side with our production to make changes add custom functionality that matches your business model.",
+    name: "Premium Migration",
+    price: "Starting from $5k",
+    description: "6-8 weeks. Ideal for growing businesses needing custom functionality and advanced integrations during migration.",
     features: [
-      "Everything from 'Theme Installation'",
-      "Partial Design for 3 key pages",
+      "Everything in Standard Migration",
       "Custom Functionality",
-      "Addl. 3 Apps (e.g. Gorgias, ReCharge)",
-      "Klaviyo Setup 5x Automation Flows"
+      "Advanced Apps Integration",
+      "Klaviyo Email Setup",
+      "60 Days Support"
     ],
     highlight: true
   },
   {
-    name: "Fully Custom",
-    price: "POA",
-    description: "16-20 weeks. Fully custom website built from the ground up. We'll work together and pick a theme that matches the brand.",
+    name: "Enterprise Migration",
+    price: "Starting from $7.5k",
+    description: "8-12 weeks. Comprehensive migration solution for large stores with complex requirements and custom integrations.",
     features: [
-      "Dedicated UX Designer",
-      "Fully Custom Development",
-      "Custom Functionality",
-      "Fully Custom Development",
-      "Bloomreach or Klaviyo Integration"
+      "Dedicated Project Manager",
+      "Custom Development",
+      "Advanced Integrations",
+      "Full Data Migration",
+      "90 Days Priority Support"
     ]
   }
 ];
