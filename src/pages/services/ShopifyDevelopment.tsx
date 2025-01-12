@@ -57,8 +57,6 @@ const pricingTiers = [
   }
 ];
 
-// ... keep existing code (features and component structure remain the same)
-
 const ShopifyDevelopment = () => {
   return (
     <div className="min-h-screen bg-secondary">
@@ -79,7 +77,7 @@ const ShopifyDevelopment = () => {
                 Custom Shopify solutions tailored to your unique business needs with a focus on performance and user experience.
               </p>
               <Button asChild size="lg">
-                <Link to="/contact" className="inline-flex items-center">
+                <Link to="/contact?service=shopify-development" className="inline-flex items-center">
                   Free Consultation
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
