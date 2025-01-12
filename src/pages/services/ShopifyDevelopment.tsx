@@ -31,31 +31,33 @@ const pricingTiers = [
     ]
   },
   {
-    name: "Theme Setup / Augmentation",
-    price: "$15k-50k",
-    description: "Starting with a theme, you'll work side by side with our UX designer to make changes to the brand.",
+    name: "Premium Migration",
+    price: "Starting from $5k",
+    description: "6-8 weeks. Ideal for growing businesses needing custom functionality and advanced integrations during migration.",
     features: [
-      "Theme Installation & Store Setup",
-      "Partial Custom Design for 3 key pages",
-      "Custom Functionality (Optional)",
-      "Add 3 Apps (e.g. Gorgias, ReCharge etc)",
-      "Klaviyo Setup & Automation Flows"
+      "Everything in Standard Migration",
+      "Custom Functionality",
+      "Advanced Apps Integration",
+      "Klaviyo Email Setup",
+      "60 Days Support"
     ],
     highlight: true
   },
   {
-    name: "Fully Custom Development",
-    price: "POA /16-20wks",
-    description: "Starting with a theme, you'll work side by side with our UX designer to make changes to the brand.",
+    name: "Enterprise Migration",
+    price: "Starting from $7.5k",
+    description: "8-12 weeks. Comprehensive migration solution for large stores with complex requirements and custom integrations.",
     features: [
-      "Dedicated UX Designer",
-      "Fully Custom Development",
-      "Custom Functionality",
-      "Fully Custom Development",
-      "Bloomreach or Klaviyo Integration"
+      "Dedicated Project Manager",
+      "Custom Development",
+      "Advanced Integrations",
+      "Full Data Migration",
+      "90 Days Priority Support"
     ]
   }
 ];
+
+// ... keep existing code (features and component structure remain the same)
 
 const ShopifyDevelopment = () => {
   return (
