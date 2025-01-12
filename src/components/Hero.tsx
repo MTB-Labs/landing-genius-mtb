@@ -123,7 +123,7 @@ export const Hero = () => {
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis dataKey="year" />
                     <YAxis 
-                      tickFormatter={(value) => `$${value.toLocaleString()}`}
+                      tickFormatter={(value) => `${(value / 1000).toFixed(0)}k`}
                     />
                     <Tooltip 
                       formatter={(value) => [`$${value.toLocaleString()}`, 'Revenue']}
