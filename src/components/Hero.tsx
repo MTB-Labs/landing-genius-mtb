@@ -33,61 +33,55 @@ export const Hero = () => {
   const scrollClients = [...clients, ...clients];
 
   return (
-    <section className="relative bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
-          <main className="mt-10 mx-auto max-w-7xl sm:mt-12 md:mt-16 lg:mt-20 xl:mt-28">
-            <div className="sm:text-center lg:text-left">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-              >
-                <span className="inline-block px-4 py-1 mb-6 text-sm font-medium bg-primary/10 text-primary rounded-full">
-                  Development Studio
-                </span>
-                <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-                  <span className="block">Transform Your</span>
-                  <span className="block text-primary">E-commerce Growth</span>
-                </h1>
-                <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl">
-                  We specialize in Shopify development, CRO optimization, and AI integrations 
-                  to help your business reach its full potential.
-                </p>
-                <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-                  <div className="rounded-md shadow">
-                    <motion.button
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
-                      onClick={handleGetStarted}
-                      className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary/90 md:py-4 md:text-lg md:px-10"
-                    >
-                      Get Started
-                      <ArrowRight className="ml-2 h-5 w-5" />
-                    </motion.button>
-                  </div>
-                </div>
-              </motion.div>
+    <section className="relative py-20 overflow-hidden bg-gradient-to-b from-primary/10 to-transparent">
+      <div className="container mx-auto px-4">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <span className="inline-block px-4 py-1 mb-6 text-sm font-medium bg-primary/10 text-primary rounded-full">
+              Development Studio
+            </span>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="block">Transform Your</span>
+              <span className="block text-primary">E-commerce Growth</span>
+            </h1>
+            <p className="text-lg text-gray-600 mb-8">
+              We specialize in Shopify development, CRO optimization, and AI integrations 
+              to help your business reach its full potential.
+            </p>
+            <motion.button
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              onClick={handleGetStarted}
+              className="inline-flex items-center px-8 py-3 text-base font-medium text-white bg-primary hover:bg-primary/90 rounded-md shadow-sm transition-colors"
+            >
+              Get Started
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </motion.button>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="relative"
+          >
+            <div className="aspect-video bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg shadow-xl flex items-center justify-center">
+              <img
+                src="/lovable-uploads/7537b699-7205-4677-8d03-4ef5a0b4b3b8.png"
+                alt="MTB Labs"
+                className="h-32 md:h-48 object-contain"
+              />
             </div>
-          </main>
-        </div>
-      </div>
-      
-      <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-        <div className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full bg-gradient-to-br from-primary/20 to-primary/5">
-          <div className="h-full w-full flex items-center justify-center">
-            <img
-              src="/lovable-uploads/7537b699-7205-4677-8d03-4ef5a0b4b3b8.png"
-              alt="MTB Labs"
-              className="h-32 md:h-48 object-contain"
-            />
-          </div>
+          </motion.div>
         </div>
       </div>
       
       {/* Logo Marquee */}
-      <div className="bg-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="bg-white/50 backdrop-blur-sm py-12 mt-20">
+        <div className="container mx-auto px-4">
           <p className="text-center text-sm text-gray-500 mb-8">
             Trusted by leading e-commerce platforms
           </p>
