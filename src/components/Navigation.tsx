@@ -88,7 +88,7 @@ export const Navigation = () => {
                     <span>Services</span>
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <div className="w-[600px] bg-white rounded-lg shadow-lg p-6">
+                    <div className="relative w-[600px] bg-white rounded-lg shadow-lg p-6 left-1/2 -translate-x-1/2">
                       <div className="grid grid-cols-2 gap-4">
                         {services.map((service) => (
                           <Link
