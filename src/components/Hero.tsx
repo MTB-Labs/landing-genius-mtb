@@ -1,6 +1,16 @@
 import { motion } from "framer-motion";
 import { toast } from "@/hooks/use-toast";
 import { ArrowRight } from "lucide-react";
+import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+
+const data = [
+  { year: '2019', growth: 2.3 },
+  { year: '2020', growth: -3.4 },
+  { year: '2021', growth: 5.7 },
+  { year: '2022', growth: 2.1 },
+  { year: '2023', growth: 2.5 },
+  { year: '2024', growth: 3.1 },
+];
 
 export const Hero = () => {
   const handleGetStarted = () => {
@@ -99,12 +109,31 @@ export const Hero = () => {
               transition={{ duration: 0.5 }}
               className="relative"
             >
-              <div className="aspect-video bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg shadow-xl flex items-center justify-center">
-                <img
-                  src="/lovable-uploads/7537b699-7205-4677-8d03-4ef5a0b4b3b8.png"
-                  alt="MTB Labs"
-                  className="h-32 md:h-48 object-contain"
-                />
+              <div className="aspect-video bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg shadow-xl p-4">
+                <ResponsiveContainer width="100%" height="100%">
+                  <AreaChart
+                    data={data}
+                    margin={{
+                      top: 10,
+                      right: 30,
+                      left: 0,
+                      bottom: 0,
+                    }}
+                  >
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="year" />
+                    <YAxis />
+                    <Tooltip />
+                    <Area 
+                      type="monotone" 
+                      dataKey="growth" 
+                      stroke="#B85C38" 
+                      fill="#B85C38" 
+                      fillOpacity={0.3}
+                      name="Economic Growth (%)"
+                    />
+                  </AreaChart>
+                </ResponsiveContainer>
               </div>
             </motion.div>
           </div>
