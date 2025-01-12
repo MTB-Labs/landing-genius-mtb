@@ -27,43 +27,33 @@ export const Hero = () => {
   const clients = [
     { 
       name: "Klaviyo Partners",
-      logo: "/logos/klaviyo.svg",
+      logo: "/lovable-uploads/6274e0d8-d1bf-488a-8c01-68e6c57b1a8d.png",
       delay: 0
     },
     { 
       name: "Shopify Partners",
-      logo: "/logos/shopify.svg",
+      logo: "/lovable-uploads/b574626d-8575-4d3d-9057-716110f67e27.png",
       delay: 0.1
     },
     { 
       name: "Intelligems",
-      logo: "/logos/intelligems.svg",
+      logo: "/lovable-uploads/17d93601-75cf-480f-a7b7-1e6ee3e51b5e.png",
       delay: 0.2
     },
     { 
       name: "GoHighLevel",
-      logo: "/logos/gohighlevel.svg",
+      logo: "/lovable-uploads/084c5fe2-c76e-47be-bbb0-8024b88b45ba.png",
       delay: 0.3
     },
     { 
-      name: "Vapi",
-      logo: "/logos/vapi.svg",
+      name: "BuyWithPrime",
+      logo: "/lovable-uploads/594f6010-9b93-452c-8769-c5e5440a8ae9.png",
       delay: 0.4
     },
     { 
-      name: "BuyWithPrime",
-      logo: "/logos/buywithprime.svg",
-      delay: 0.5
-    },
-    { 
       name: "Rebuy",
-      logo: "/logos/rebuy.svg",
-      delay: 0.6
-    },
-    { 
-      name: "Yotpo",
-      logo: "/logos/yotpo.svg",
-      delay: 0.7
+      logo: "/lovable-uploads/135e00de-f5af-436a-8830-c783309fbb5c.png",
+      delay: 0.5
     }
   ];
 
@@ -168,7 +158,7 @@ export const Hero = () => {
                   <img 
                     src={client.logo}
                     alt={client.name}
-                    className="h-12 w-auto filter grayscale hover:grayscale-0 transition-all duration-300"
+                    className="h-12 w-auto filter hover:brightness-110 transition-all duration-300"
                   />
                   <span className="text-sm text-gray-600">{client.name}</span>
                 </motion.div>
