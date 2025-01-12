@@ -1,7 +1,54 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Home, Briefcase, MessageSquare, Menu, X } from "lucide-react";
+import { Home, MessageSquare, Menu, X, Briefcase, ShoppingCart, ArrowRightLeft, LineChart, Code2, Sparkles, BarChart3 } from "lucide-react";
 import { Button } from "./ui/button";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
+
+const services = [
+  {
+    title: "Shopify Development",
+    description: "Custom Shopify solutions tailored to your unique business needs.",
+    icon: ShoppingCart,
+    href: "/services/shopify-development"
+  },
+  {
+    title: "WooCommerce to Shopify",
+    description: "Seamless migration service with zero data loss.",
+    icon: ArrowRightLeft,
+    href: "/services/woocommerce-to-shopify"
+  },
+  {
+    title: "CRO Optimization",
+    description: "Data-driven strategies to maximize your e-commerce revenue.",
+    icon: BarChart3,
+    href: "/services/cro-optimization"
+  },
+  {
+    title: "Custom Development",
+    description: "Bespoke e-commerce solutions built to scale.",
+    icon: Code2,
+    href: "/services/custom-development"
+  },
+  {
+    title: "AI Integration",
+    description: "Cutting-edge AI solutions for automation and personalization.",
+    icon: LineChart,
+    href: "/services/ai-integration"
+  },
+  {
+    title: "UI/UX Design",
+    description: "Beautiful, conversion-focused designs.",
+    icon: Sparkles,
+    href: "/services/ui-ux-design"
+  }
+];
 
 export const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,10 +79,37 @@ export const Navigation = () => {
               <Home className="w-4 h-4" />
               <span>Home</span>
             </Link>
-            <Link to="/services" className="flex items-center space-x-2 text-gray-600 hover:text-primary">
-              <Briefcase className="w-4 h-4" />
-              <span>Services</span>
-            </Link>
+            
+            <NavigationMenu>
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="flex items-center space-x-2 text-gray-600 hover:text-primary">
+                    <Briefcase className="w-4 h-4" />
+                    <span>Services</span>
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <div className="grid grid-cols-2 gap-4 p-6 w-[600px]">
+                      {services.map((service) => (
+                        <Link
+                          key={service.title}
+                          to={service.href}
+                          className="flex items-start space-x-3 p-3 rounded-lg hover:bg-muted"
+                        >
+                          <service.icon className="w-5 h-5 text-primary mt-1" />
+                          <div>
+                            <div className="font-medium">{service.title}</div>
+                            <p className="text-sm text-muted-foreground">
+                              {service.description}
+                            </p>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
+
             <Link to="/contact" className="flex items-center space-x-2 text-gray-600 hover:text-primary">
               <MessageSquare className="w-4 h-4" />
               <span>Contact</span>
@@ -57,14 +131,27 @@ export const Navigation = () => {
               <Home className="w-4 h-4" />
               <span>Home</span>
             </Link>
-            <Link 
-              to="/services" 
-              className="flex items-center space-x-2 text-gray-600 hover:text-primary px-2 py-2 rounded-md"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              <Briefcase className="w-4 h-4" />
-              <span>Services</span>
-            </Link>
+            
+            <div className="space-y-2 pl-2">
+              <div className="flex items-center space-x-2 text-gray-600 px-2 py-2">
+                <Briefcase className="w-4 h-4" />
+                <span className="font-medium">Services</span>
+              </div>
+              <div className="space-y-2 pl-6">
+                {services.map((service) => (
+                  <Link
+                    key={service.title}
+                    to={service.href}
+                    className="flex items-center space-x-2 text-gray-600 hover:text-primary px-2 py-2 rounded-md"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <service.icon className="w-4 h-4" />
+                    <span>{service.title}</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
             <Link 
               to="/contact" 
               className="flex items-center space-x-2 text-gray-600 hover:text-primary px-2 py-2 rounded-md"

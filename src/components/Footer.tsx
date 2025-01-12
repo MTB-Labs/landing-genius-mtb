@@ -37,6 +37,11 @@ export const Footer = () => {
                   </Link>
                 </li>
                 <li>
+                  <Link to="/services/woocommerce-to-shopify" className="hover:text-primary transition-colors">
+                    WooCommerce to Shopify Migration
+                  </Link>
+                </li>
+                <li>
                   <Link to="/services/ai-integration" className="hover:text-primary transition-colors">
                     AI Integration
                   </Link>
