@@ -3,7 +3,7 @@ import { Facebook, Linkedin } from "lucide-react";
 
 export const Footer = () => {
   return (
-    <footer className="bg-[#1A1F2C] text-white py-16">
+    <footer className="bg-muted text-foreground py-16">
       <div className="container mx-auto px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
           {/* Left Column */}
@@ -23,14 +23,14 @@ export const Footer = () => {
           {/* Right Column */}
           <div className="space-y-8">
             <h3 className="text-2xl font-bold">MTB Labs</h3>
-            <p className="text-gray-300 mb-8 max-w-lg">
+            <p className="text-muted-foreground mb-8 max-w-lg">
               Elevating businesses with innovative digital solutions in the $1M-$20M ARR bracket. 
               Our expertise lies in Web Development, Conversion Rate Enhancement, and AI Integration.
             </p>
             
             <div className="space-y-6">
               <h4 className="text-xl font-semibold text-primary">eCommerce Services</h4>
-              <ul className="space-y-3 text-gray-300">
+              <ul className="space-y-3 text-muted-foreground">
                 <li>
                   <Link to="/services/shopify-development" className="hover:text-primary transition-colors">
                     Shopify Development
@@ -58,7 +58,7 @@ export const Footer = () => {
         
         {/* Bottom Bar */}
         <div className="border-t border-primary/30 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm mb-4 md:mb-0">
+          <p className="text-muted-foreground text-sm mb-4 md:mb-0">
             Copyright © MTB Labs | Web Development & AI Integration Partner
           </p>
           <div className="flex space-x-4">
@@ -66,7 +66,7 @@ export const Footer = () => {
               href="https://facebook.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-primary transition-colors"
+              className="text-muted-foreground hover:text-primary transition-colors"
             >
               <Facebook className="w-5 h-5" />
             </a>
@@ -74,7 +74,7 @@ export const Footer = () => {
               href="https://linkedin.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-primary transition-colors"
+              className="text-muted-foreground hover:text-primary transition-colors"
             >
               <Linkedin className="w-5 h-5" />
             </a>
