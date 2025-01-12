@@ -22,7 +22,11 @@ export const Footer = () => {
           
           {/* Right Column */}
           <div className="space-y-8">
-            <h3 className="text-2xl font-bold">MTB Labs</h3>
+            <img 
+              src="/lovable-uploads/7537b699-7205-4677-8d03-4ef5a0b4b3b8.png" 
+              alt="MTB Labs Logo" 
+              className="h-8 w-auto"
+            />
             <p className="text-muted-foreground mb-8 max-w-lg">
               Elevating businesses with innovative digital solutions in the $1M-$20M ARR bracket. 
               Our expertise lies in Web Development, Conversion Rate Enhancement, and AI Integration.
