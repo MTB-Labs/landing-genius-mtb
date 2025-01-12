@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { toast } from "@/hooks/use-toast";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ShoppingBag, BarChart, Brain } from "lucide-react";
 
 export const Hero = () => {
   const handleGetStarted = () => {
@@ -16,16 +16,19 @@ export const Hero = () => {
 
   const clients = [
     { 
-      name: "Shopify Plus", 
-      logo: "/placeholder.svg" 
+      name: "Shopify Plus",
+      icon: ShoppingBag,
+      delay: 0
     },
     { 
-      name: "BigCommerce", 
-      logo: "/placeholder.svg"
+      name: "BigCommerce",
+      icon: BarChart,
+      delay: 0.2
     },
     { 
-      name: "WooCommerce", 
-      logo: "/placeholder.svg"
+      name: "WooCommerce",
+      icon: Brain,
+      delay: 0.4
     },
   ];
 
@@ -40,6 +43,7 @@ export const Hero = () => {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
+            className="max-w-xl"
           >
             <span className="inline-block px-4 py-1 mb-6 text-sm font-medium bg-primary/10 text-primary rounded-full">
               Development Studio
@@ -87,15 +91,29 @@ export const Hero = () => {
           </p>
           <div className="relative overflow-hidden">
             <div className="flex space-x-16 animate-marquee">
-              {scrollClients.map((client, index) => (
-                <motion.img
-                  key={`${client.name}-${index}`}
-                  src={client.logo}
-                  alt={client.name}
-                  className="h-8 md:h-10 w-auto grayscale hover:grayscale-0 transition-all flex-shrink-0"
-                  whileHover={{ scale: 1.05 }}
-                />
-              ))}
+              {scrollClients.map((client, index) => {
+                const Icon = client.icon;
+                return (
+                  <motion.div
+                    key={`${client.name}-${index}`}
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ 
+                      duration: 0.5,
+                      delay: client.delay,
+                      type: "spring",
+                      stiffness: 100
+                    }}
+                    className="flex flex-col items-center space-y-2"
+                  >
+                    <Icon 
+                      className="h-12 w-12 text-primary/70 hover:text-primary transition-colors"
+                      strokeWidth={1.5}
+                    />
+                    <span className="text-sm text-gray-600">{client.name}</span>
+                  </motion.div>
+                );
+              })}
             </div>
           </div>
         </div>
