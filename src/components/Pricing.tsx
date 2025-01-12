@@ -15,10 +15,10 @@ interface PricingProps {
   title: string;
   description: string;
   tiers: PricingTier[];
-  service?: string;
+  service: string;
 }
 
-export const Pricing = ({ title, description, tiers, service = "cro-optimization" }: PricingProps) => {
+export const Pricing = ({ title, description, tiers, service }: PricingProps) => {
   return (
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
