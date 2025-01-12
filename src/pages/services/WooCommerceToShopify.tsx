@@ -57,8 +57,6 @@ const pricingTiers = [
   }
 ];
 
-// ... keep existing code (features and component structure remain the same)
-
 const WooCommerceToShopify = () => {
   return (
     <div className="min-h-screen bg-secondary">
@@ -79,7 +77,10 @@ const WooCommerceToShopify = () => {
                 Seamlessly migrate your WooCommerce store to Shopify with our expert migration service. We ensure zero data loss and minimal downtime during the transition.
               </p>
               <Button asChild size="lg">
-                <Link to="/contact" className="inline-flex items-center">
+                <Link 
+                  to="/contact?service=woocommerce-to-shopify" 
+                  className="inline-flex items-center"
+                >
                   Free Consultation
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>

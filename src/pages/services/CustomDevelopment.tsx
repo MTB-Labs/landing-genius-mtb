@@ -77,7 +77,10 @@ const CustomDevelopment = () => {
                 Bespoke e-commerce solutions and integrations built to scale with your business needs.
               </p>
               <Button asChild size="lg">
-                <Link to="/contact" className="inline-flex items-center">
+                <Link 
+                  to="/contact?service=custom-development" 
+                  className="inline-flex items-center"
+                >
                   Free Consultation
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>

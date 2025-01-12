@@ -86,7 +86,10 @@ const CroOptimization = () => {
                 Data-driven conversion rate optimization strategies to maximize your e-commerce revenue and customer engagement.
               </p>
               <Button asChild size="lg">
-                <Link to="/contact" className="inline-flex items-center">
+                <Link 
+                  to="/contact?service=cro-optimization" 
+                  className="inline-flex items-center"
+                >
                   Free Consultation
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>

@@ -77,7 +77,7 @@ const UiUxDesign = () => {
                 Beautiful, conversion-focused designs that enhance user experience and drive sales.
               </p>
               <Button asChild size="lg">
-                <Link to="/contact" className="inline-flex items-center">
+                <Link to="/contact?service=ui-ux-design" className="inline-flex items-center">
                   Free Consultation
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>

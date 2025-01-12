@@ -77,7 +77,10 @@ const ShopifyDevelopment = () => {
                 Custom Shopify solutions tailored to your unique business needs with a focus on performance and user experience.
               </p>
               <Button asChild size="lg">
-                <Link to="/contact?service=shopify-development" className="inline-flex items-center">
+                <Link 
+                  to="/contact?service=shopify-development" 
+                  className="inline-flex items-center"
+                >
                   Free Consultation
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>

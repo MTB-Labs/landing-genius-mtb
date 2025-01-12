@@ -92,7 +92,10 @@ const AiIntegration = () => {
                 Transform your business with cutting-edge AI solutions for automation, personalization, and enhanced customer experiences.
               </p>
               <Button asChild size="lg">
-                <Link to="/contact" className="inline-flex items-center">
+                <Link 
+                  to="/contact?service=ai-integration" 
+                  className="inline-flex items-center"
+                >
                   Free Consultation
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
