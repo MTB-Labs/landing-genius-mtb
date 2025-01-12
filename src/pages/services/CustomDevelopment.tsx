@@ -62,7 +62,12 @@ const pricingTiers = [
 
 const CustomDevelopment = () => {
   return (
-    <div className="min-h-screen bg-secondary">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="min-h-screen bg-secondary"
+    >
       <Navigation />
       
       <section className="relative py-20 overflow-hidden bg-gradient-to-b from-primary/10 to-transparent">
@@ -136,7 +141,7 @@ const CustomDevelopment = () => {
       />
 
       <Footer />
-    </div>
+    </motion.div>
   );
 };
 

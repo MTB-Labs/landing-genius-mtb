@@ -1,11 +1,12 @@
+import { motion } from "framer-motion";
 import { Hero } from "@/components/Hero";
 import { Services } from "@/components/Services";
 import { Stats } from "@/components/Stats";
-import { Tools } from "@/components/Tools";
 import { Blog } from "@/components/Blog";
+import { Tools } from "@/components/Tools";
 import { Contact } from "@/components/Contact";
 import { Navigation } from "@/components/Navigation";
-import { motion } from "framer-motion";
+import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -19,9 +20,10 @@ const Index = () => {
       <Hero />
       <Services />
       <Stats />
-      <Tools />
       <Blog />
+      <Tools />
       <Contact />
+      <Footer />
     </motion.div>
   );
 };
