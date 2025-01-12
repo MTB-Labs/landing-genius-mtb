@@ -3,59 +3,56 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, CheckCircle2, Sparkles } from "lucide-react";
 import { Pricing } from "@/components/Pricing";
 
 const features = [
-  "User Interface Design",
-  "User Experience Design",
+  "User Research & Analysis",
   "Wireframing & Prototyping",
-  "Mobile-First Design",
+  "Visual Design",
+  "Interaction Design",
+  "Usability Testing",
   "Responsive Design",
   "Design Systems",
-  "Visual Design",
-  "Usability Testing",
+  "Brand Integration",
 ];
 
 const pricingTiers = [
   {
-    name: "Essential",
-    price: "$3,999",
-    description: "Perfect for small projects and startups",
+    name: "Hourly Rate / Retainer",
+    price: "$50 per hour",
+    description: "Need us to design new features or improve existing ones, we got you.",
     features: [
-      "UI Design",
-      "Wireframing",
-      "Basic Prototyping",
-      "2 Revisions",
-      "Basic Style Guide",
-      "14 Days Support"
+      "Let's scope out what you need and create a plan of action",
+      "Minimum 20 hour engagement",
+      "UI/UX Design",
+      "Prototyping",
+      "Ongoing Support Available"
     ]
   },
   {
-    name: "Professional",
-    price: "$7,999",
-    description: "Comprehensive design solution",
+    name: "Premium Migration",
+    price: "Starting from $5k",
+    description: "6-8 weeks. Ideal for growing businesses needing custom functionality and advanced integrations during migration.",
     features: [
-      "Everything in Essential",
-      "UX Research",
-      "Advanced Prototyping",
-      "5 Revisions",
-      "Complete Style Guide",
-      "30 Days Support"
+      "Everything in Standard Migration",
+      "Custom Functionality",
+      "Advanced Apps Integration",
+      "Klaviyo Email Setup",
+      "60 Days Support"
     ],
     highlight: true
   },
   {
-    name: "Enterprise",
-    price: "POA",
-    description: "Custom design solutions for large projects",
+    name: "Enterprise Migration",
+    price: "Starting from $7.5k",
+    description: "8-12 weeks. Comprehensive migration solution for large stores with complex requirements and custom integrations.",
     features: [
-      "Everything in Professional",
-      "Full UX Research",
-      "Design System",
-      "Unlimited Revisions",
-      "Brand Guidelines",
-      "90 Days Support"
+      "Dedicated Project Manager",
+      "Custom Development",
+      "Advanced Integrations",
+      "Full Data Migration",
+      "90 Days Priority Support"
     ]
   }
 ];
@@ -81,7 +78,7 @@ const UiUxDesign = () => {
               </p>
               <Button asChild size="lg">
                 <Link to="/contact" className="inline-flex items-center">
-                  Get Started
+                  Free Consultation
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
@@ -92,11 +89,9 @@ const UiUxDesign = () => {
               transition={{ duration: 0.5 }}
               className="relative"
             >
-              <img
-                src="/placeholder.svg"
-                alt="UI/UX Design"
-                className="rounded-lg shadow-xl"
-              />
+              <div className="aspect-video bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg shadow-xl flex items-center justify-center">
+                <Sparkles className="w-24 h-24 text-primary/40" />
+              </div>
             </motion.div>
           </div>
         </div>
@@ -106,13 +101,13 @@ const UiUxDesign = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Design Services
+              Our Design Process
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              We create intuitive and engaging user experiences that convert visitors into customers.
+              We follow a user-centered design approach to create engaging and effective experiences.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={feature}
@@ -129,9 +124,56 @@ const UiUxDesign = () => {
         </div>
       </section>
 
+      <section className="py-20 bg-muted">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Why Choose Our UI/UX Design?
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              With expertise in e-commerce design, we create experiences that convert visitors into customers.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              className="bg-white p-8 rounded-lg shadow-sm"
+            >
+              <h3 className="text-xl font-semibold mb-4">User-Centered Design</h3>
+              <p className="text-gray-600">
+                We put your users first to create intuitive and engaging experiences.
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              className="bg-white p-8 rounded-lg shadow-sm"
+            >
+              <h3 className="text-xl font-semibold mb-4">Conversion-Focused</h3>
+              <p className="text-gray-600">
+                Our designs are optimized to drive conversions and increase sales.
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="bg-white p-8 rounded-lg shadow-sm"
+            >
+              <h3 className="text-xl font-semibold mb-4">Brand Consistency</h3>
+              <p className="text-gray-600">
+                We ensure your brand identity shines through every design element.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       <Pricing
-        title="UI/UX Design Pricing"
-        description="Select the design package that matches your vision"
+        title="Design Packages"
+        description="Choose the right design package for your business needs"
         tiers={pricingTiers}
       />
 
