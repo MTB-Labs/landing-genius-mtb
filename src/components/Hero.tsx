@@ -67,7 +67,6 @@ export const Hero = () => {
     }
   ];
 
-  // Duplicate the clients array for infinite scroll
   const scrollClients = [...clients, ...clients];
 
   return (
@@ -165,7 +164,7 @@ export const Hero = () => {
                   }}
                   className="flex flex-col items-center space-y-2"
                 >
-                  <div className="w-auto h-12 flex items-center justify-center">
+                  <div className="w-auto h-[75px] flex items-center justify-center">
                     <img 
                       src={client.logo}
                       alt={client.name}
