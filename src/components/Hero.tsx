@@ -27,42 +27,42 @@ export const Hero = () => {
   const clients = [
     { 
       name: "Klaviyo Partners",
-      logo: "/lovable-uploads/6274e0d8-d1bf-488a-8c01-68e6c57b1a8d.png",
+      logo: "/lovable-uploads/335efb77-5260-4b38-9f00-b36dcd993f21.png",
       delay: 0
     },
     { 
       name: "Shopify Partners",
-      logo: "/lovable-uploads/b574626d-8575-4d3d-9057-716110f67e27.png",
+      logo: "/lovable-uploads/52aaafcc-2a3d-42bb-a2dc-f7809274497a.png",
       delay: 0.1
     },
     { 
       name: "Intelligems",
-      logo: "/lovable-uploads/17d93601-75cf-480f-a7b7-1e6ee3e51b5e.png",
+      logo: "/lovable-uploads/b7b4166e-1c17-4a7d-85d1-1f2df2e07d5b.png",
       delay: 0.2
     },
     { 
       name: "GoHighLevel",
-      logo: "/lovable-uploads/084c5fe2-c76e-47be-bbb0-8024b88b45ba.png",
+      logo: "/lovable-uploads/c899dd16-ee5e-44d5-91e4-b3aa41c874b9.png",
       delay: 0.3
     },
     { 
       name: "BuyWithPrime",
-      logo: "/lovable-uploads/594f6010-9b93-452c-8769-c5e5440a8ae9.png",
+      logo: "/lovable-uploads/ac46031e-fbb6-42f4-ba64-40d231d38ff3.png",
       delay: 0.4
     },
     { 
       name: "Rebuy",
-      logo: "/lovable-uploads/135e00de-f5af-436a-8830-c783309fbb5c.png",
+      logo: "/lovable-uploads/1b31756b-4175-4b8a-bbdc-6b9ce3574019.png",
       delay: 0.5
     },
     {
       name: "Vapi",
-      logo: "/lovable-uploads/d01101ff-1306-4b1e-b5ef-cf82a3b3d961.png",
+      logo: "/lovable-uploads/32727b2e-4068-468d-99fe-87cffd2eef1d.png",
       delay: 0.6
     },
     {
       name: "Yotpo",
-      logo: "/lovable-uploads/d973cfef-5d43-47a7-9b36-7c9f94be423f.png",
+      logo: "/lovable-uploads/f3cf6534-77f5-4dce-9807-ee908ac073e2.png",
       delay: 0.7
     }
   ];
