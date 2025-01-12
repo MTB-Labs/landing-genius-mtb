@@ -1,40 +1,83 @@
-import { motion } from "framer-motion";
-import { Navigation } from "@/components/Navigation";
-import { Footer } from "@/components/Footer";
+import { Card } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import { useToast } from "@/components/ui/use-toast";
 
 const ColorPalette = () => {
+  const [baseColor, setBaseColor] = useState("#000000");
+  const [palette, setPalette] = useState<string[]>([]);
+  const { toast } = useToast();
+
+  const generatePalette = () => {
+    // Simple palette generation logic
+    const shades = [
+      baseColor,
+      adjustBrightness(baseColor, 20),
+      adjustBrightness(baseColor, 40),
+      adjustBrightness(baseColor, 60),
+      adjustBrightness(baseColor, 80),
+    ];
+    setPalette(shades);
+    
+    toast({
+      title: "Palette Generated",
+      description: "Your color palette has been generated.",
+    });
+  };
+
+  const adjustBrightness = (hex: string, percent: number) => {
+    const num = parseInt(hex.replace("#", ""), 16);
+    const amt = Math.round(2.55 * percent);
+    const R = (num >> 16) + amt;
+    const G = (num >> 8 & 0x00FF) + amt;
+    const B = (num & 0x0000FF) + amt;
+    return "#" + (
+      0x1000000 +
+      (R < 255 ? (R < 1 ? 0 : R) : 255) * 0x10000 +
+      (G < 255 ? (G < 1 ? 0 : G) : 255) * 0x100 +
+      (B < 255 ? (B < 1 ? 0 : B) : 255)
+    ).toString(16).slice(1);
+  };
+
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      className="min-h-screen bg-secondary"
-    >
-      <Navigation />
-      <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold mb-8">Color Palette Generator</h1>
-        <p className="mb-4">Generate beautiful color palettes for your projects.</p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="bg-white p-4 rounded shadow">
-            <h2 className="text-2xl font-semibold">Palette 1</h2>
-            <div className="flex space-x-2">
-              <div className="w-16 h-16 bg-red-500"></div>
-              <div className="w-16 h-16 bg-green-500"></div>
-              <div className="w-16 h-16 bg-blue-500"></div>
-            </div>
+    <div className="container mx-auto px-4 py-24">
+      <h1 className="text-4xl font-bold text-center mb-8">Color Palette Generator</h1>
+      <Card className="max-w-md mx-auto p-6">
+        <div className="space-y-4">
+          <div>
+            <label className="block text-sm font-medium mb-2">Base Color</label>
+            <Input
+              type="color"
+              value={baseColor}
+              onChange={(e) => setBaseColor(e.target.value)}
+              className="h-12"
+            />
           </div>
-          <div className="bg-white p-4 rounded shadow">
-            <h2 className="text-2xl font-semibold">Palette 2</h2>
-            <div className="flex space-x-2">
-              <div className="w-16 h-16 bg-yellow-500"></div>
-              <div className="w-16 h-16 bg-purple-500"></div>
-              <div className="w-16 h-16 bg-pink-500"></div>
+          <Button onClick={generatePalette} className="w-full">
+            Generate Palette
+          </Button>
+          {palette.length > 0 && (
+            <div className="grid grid-cols-5 gap-2 mt-4">
+              {palette.map((color, index) => (
+                <div
+                  key={index}
+                  className="aspect-square rounded-lg"
+                  style={{ backgroundColor: color }}
+                  onClick={() => {
+                    navigator.clipboard.writeText(color);
+                    toast({
+                      title: "Color Copied",
+                      description: `${color} copied to clipboard`,
+                    });
+                  }}
+                />
+              ))}
             </div>
-          </div>
+          )}
         </div>
-      </div>
-      <Footer />
-    </motion.div>
+      </Card>
+    </div>
   );
 };
 

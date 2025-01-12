@@ -1,48 +1,88 @@
-import { motion } from "framer-motion";
-import { Navigation } from "@/components/Navigation";
-import { Footer } from "@/components/Footer";
+import { Card } from "@/components/ui/card";
+import { Textarea } from "@/components/ui/textarea";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import { useToast } from "@/components/ui/use-toast";
 
 const PrivacyPolicy = () => {
+  const [companyName, setCompanyName] = useState("");
+  const [website, setWebsite] = useState("");
+  const [policy, setPolicy] = useState("");
+  const { toast } = useToast();
+
+  const generatePolicy = () => {
+    if (!companyName || !website) {
+      toast({
+        title: "Missing Information",
+        description: "Please fill in all required fields.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    const generatedPolicy = `Privacy Policy for ${companyName}
+
+Last updated: ${new Date().toLocaleDateString()}
+
+This privacy policy describes how ${companyName} ("we", "us", or "our") collects, uses, and protects your personal information when you visit ${website} (the "Website").
+
+1. Information We Collect
+2. How We Use Your Information
+3. Information Sharing
+4. Your Rights
+5. Security Measures
+6. Updates to This Policy
+7. Contact Information`;
+
+    setPolicy(generatedPolicy);
+    toast({
+      title: "Privacy Policy Generated",
+      description: "Your privacy policy has been generated successfully.",
+    });
+  };
+
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      className="min-h-screen bg-secondary"
-    >
-      <Navigation />
-      <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold mb-8">Privacy Policy Generator</h1>
-        <p className="mb-4">
-          This Privacy Policy outlines how we collect, use, and protect your information when you use our services.
-        </p>
-        <h2 className="text-2xl font-semibold mb-4">Information We Collect</h2>
-        <p className="mb-4">
-          We may collect personal information such as your name, email address, and any other information you provide to us.
-        </p>
-        <h2 className="text-2xl font-semibold mb-4">How We Use Your Information</h2>
-        <p className="mb-4">
-          We use your information to provide and improve our services, communicate with you, and comply with legal obligations.
-        </p>
-        <h2 className="text-2xl font-semibold mb-4">Data Security</h2>
-        <p className="mb-4">
-          We take reasonable measures to protect your information from unauthorized access, use, or disclosure.
-        </p>
-        <h2 className="text-2xl font-semibold mb-4">Your Rights</h2>
-        <p className="mb-4">
-          You have the right to access, correct, or delete your personal information at any time.
-        </p>
-        <h2 className="text-2xl font-semibold mb-4">Changes to This Policy</h2>
-        <p className="mb-4">
-          We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on our website.
-        </p>
-        <h2 className="text-2xl font-semibold mb-4">Contact Us</h2>
-        <p className="mb-4">
-          If you have any questions about this Privacy Policy, please contact us at support@example.com.
-        </p>
-      </div>
-      <Footer />
-    </motion.div>
+    <div className="container mx-auto px-4 py-24">
+      <h1 className="text-4xl font-bold text-center mb-8">
+        Privacy Policy Generator
+      </h1>
+      <Card className="max-w-2xl mx-auto p-6">
+        <div className="space-y-4">
+          <div>
+            <label className="block text-sm font-medium mb-2">Company Name</label>
+            <Input
+              value={companyName}
+              onChange={(e) => setCompanyName(e.target.value)}
+              placeholder="Enter your company name"
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium mb-2">Website URL</label>
+            <Input
+              value={website}
+              onChange={(e) => setWebsite(e.target.value)}
+              placeholder="Enter your website URL"
+            />
+          </div>
+          <Button onClick={generatePolicy} className="w-full">
+            Generate Privacy Policy
+          </Button>
+          {policy && (
+            <div className="mt-4">
+              <label className="block text-sm font-medium mb-2">
+                Generated Policy
+              </label>
+              <Textarea
+                value={policy}
+                readOnly
+                className="h-[400px]"
+              />
+            </div>
+          )}
+        </div>
+      </Card>
+    </div>
   );
 };
 

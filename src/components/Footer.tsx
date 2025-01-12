@@ -46,6 +46,11 @@ export const Footer = () => {
                     Conversion Rate Optimization
                   </Link>
                 </li>
+                <li>
+                  <Link to="/tools" className="hover:text-primary transition-colors">
+                    Explore more tools with MTB Labs
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>

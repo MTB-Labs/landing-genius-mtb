@@ -1,37 +1,77 @@
-import { motion } from "framer-motion";
-import { Navigation } from "@/components/Navigation";
-import { Footer } from "@/components/Footer";
+import { Card } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import { useToast } from "@/components/ui/use-toast";
 
 const RoiCalculator = () => {
+  const [investment, setInvestment] = useState("");
+  const [revenue, setRevenue] = useState("");
+  const [roi, setRoi] = useState<number | null>(null);
+  const { toast } = useToast();
+
+  const calculateROI = () => {
+    const investmentNum = parseFloat(investment);
+    const revenueNum = parseFloat(revenue);
+
+    if (isNaN(investmentNum) || isNaN(revenueNum)) {
+      toast({
+        title: "Invalid Input",
+        description: "Please enter valid numbers for investment and revenue.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    const roiValue = ((revenueNum - investmentNum) / investmentNum) * 100;
+    setRoi(roiValue);
+
+    toast({
+      title: "ROI Calculated",
+      description: `Your ROI is ${roiValue.toFixed(2)}%`,
+    });
+  };
+
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      className="min-h-screen bg-secondary"
-    >
-      <Navigation />
-      <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold mb-8">ROI Calculator</h1>
-        <p className="text-lg mb-4">Calculate your return on investment with our easy-to-use ROI calculator.</p>
-        <form className="space-y-4">
+    <div className="container mx-auto px-4 py-24">
+      <h1 className="text-4xl font-bold text-center mb-8">ROI Calculator</h1>
+      <Card className="max-w-md mx-auto p-6">
+        <div className="space-y-4">
           <div>
-            <label htmlFor="investment" className="block text-sm font-medium">Initial Investment</label>
-            <input type="number" id="investment" className="mt-1 block w-full border border-gray-300 rounded-md p-2" placeholder="Enter your investment amount" />
+            <label className="block text-sm font-medium mb-2">
+              Initial Investment ($)
+            </label>
+            <Input
+              type="number"
+              value={investment}
+              onChange={(e) => setInvestment(e.target.value)}
+              placeholder="Enter investment amount"
+            />
           </div>
           <div>
-            <label htmlFor="return" className="block text-sm font-medium">Expected Return</label>
-            <input type="number" id="return" className="mt-1 block w-full border border-gray-300 rounded-md p-2" placeholder="Enter your expected return amount" />
+            <label className="block text-sm font-medium mb-2">
+              Revenue Generated ($)
+            </label>
+            <Input
+              type="number"
+              value={revenue}
+              onChange={(e) => setRevenue(e.target.value)}
+              placeholder="Enter revenue amount"
+            />
           </div>
-          <button type="submit" className="w-full bg-primary text-white py-2 rounded-md">Calculate ROI</button>
-        </form>
-        <div className="mt-8">
-          <h2 className="text-2xl font-bold">Results</h2>
-          <p className="text-lg">Your ROI will be displayed here after calculation.</p>
+          <Button onClick={calculateROI} className="w-full">
+            Calculate ROI
+          </Button>
+          {roi !== null && (
+            <div className="mt-4 p-4 bg-muted rounded-lg">
+              <p className="text-center font-medium">
+                Your ROI: {roi.toFixed(2)}%
+              </p>
+            </div>
+          )}
         </div>
-      </div>
-      <Footer />
-    </motion.div>
+      </Card>
+    </div>
   );
 };
 
