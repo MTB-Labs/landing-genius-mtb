@@ -31,27 +31,27 @@ const pricingTiers = [
     ]
   },
   {
-    name: "Premium Migration",
-    price: "Starting from $5k",
-    description: "6-8 weeks. Ideal for growing businesses needing custom functionality and advanced integrations during migration.",
+    name: "Custom Solution Package",
+    price: "Starting from $4k",
+    description: "6-8 weeks. Perfect for businesses needing tailored development solutions.",
     features: [
-      "Everything in Standard Migration",
-      "Custom Functionality",
-      "Advanced Apps Integration",
-      "Klaviyo Email Setup",
+      "Custom Feature Development",
+      "Third-party Integrations",
+      "API Development",
+      "Performance Optimization",
       "60 Days Support"
     ],
     highlight: true
   },
   {
-    name: "Enterprise Migration",
-    price: "Starting from $7.5k",
-    description: "8-12 weeks. Comprehensive migration solution for large stores with complex requirements and custom integrations.",
+    name: "Enterprise Solution",
+    price: "Starting from $8k",
+    description: "12-16 weeks. Comprehensive development solution for complex enterprise requirements.",
     features: [
-      "Dedicated Project Manager",
-      "Custom Development",
-      "Advanced Integrations",
-      "Full Data Migration",
+      "Full-stack Development",
+      "Complex System Integration",
+      "Scalable Architecture",
+      "Security Implementation",
       "90 Days Priority Support"
     ]
   }

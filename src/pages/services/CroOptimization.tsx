@@ -31,27 +31,27 @@ const pricingTiers = [
     ]
   },
   {
-    name: "Premium Migration",
-    price: "Starting from $5k",
-    description: "6-8 weeks. Ideal for growing businesses needing custom functionality and advanced integrations during migration.",
+    name: "Growth Package",
+    price: "Starting from $2.5k",
+    description: "4-6 weeks. Perfect for businesses looking to optimize their conversion rates and improve user experience.",
     features: [
-      "Everything in Standard Migration",
-      "Custom Functionality",
-      "Advanced Apps Integration",
-      "Klaviyo Email Setup",
-      "60 Days Support"
+      "Comprehensive Site Analysis",
+      "User Behavior Tracking",
+      "A/B Testing Implementation",
+      "Conversion Funnel Optimization",
+      "30 Days Support"
     ],
     highlight: true
   },
   {
-    name: "Enterprise Migration",
-    price: "Starting from $7.5k",
-    description: "8-12 weeks. Comprehensive migration solution for large stores with complex requirements and custom integrations.",
+    name: "Enterprise Package",
+    price: "Starting from $5k",
+    description: "8-12 weeks. Complete CRO solution for large e-commerce stores with complex optimization needs.",
     features: [
-      "Dedicated Project Manager",
-      "Custom Development",
-      "Advanced Integrations",
-      "Full Data Migration",
+      "Advanced Analytics Setup",
+      "Multi-variant Testing",
+      "Personalization Strategy",
+      "Custom Reporting Dashboard",
       "90 Days Priority Support"
     ]
   }

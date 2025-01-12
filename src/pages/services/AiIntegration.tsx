@@ -31,27 +31,27 @@ const pricingTiers = [
     ]
   },
   {
-    name: "Premium Migration",
-    price: "Starting from $5k",
-    description: "6-8 weeks. Ideal for growing businesses needing custom functionality and advanced integrations during migration.",
+    name: "AI Starter Package",
+    price: "Starting from $3k",
+    description: "4-6 weeks. Ideal for businesses looking to implement basic AI functionality and automation.",
     features: [
-      "Everything in Standard Migration",
-      "Custom Functionality",
-      "Advanced Apps Integration",
-      "Klaviyo Email Setup",
-      "60 Days Support"
+      "Chatbot Implementation",
+      "Basic Automation Setup",
+      "Product Recommendations",
+      "Performance Monitoring",
+      "30 Days Support"
     ],
     highlight: true
   },
   {
-    name: "Enterprise Migration",
-    price: "Starting from $7.5k",
-    description: "8-12 weeks. Comprehensive migration solution for large stores with complex requirements and custom integrations.",
+    name: "AI Enterprise Package",
+    price: "Starting from $6k",
+    description: "8-12 weeks. Advanced AI integration for businesses requiring sophisticated machine learning solutions.",
     features: [
-      "Dedicated Project Manager",
-      "Custom Development",
-      "Advanced Integrations",
-      "Full Data Migration",
+      "Custom AI Model Development",
+      "Advanced Automation",
+      "Predictive Analytics",
+      "Integration with Existing Systems",
       "90 Days Priority Support"
     ]
   }
