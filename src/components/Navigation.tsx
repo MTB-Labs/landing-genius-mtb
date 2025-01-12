@@ -6,7 +6,6 @@ import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
@@ -76,7 +75,10 @@ export const Navigation = () => {
 
           {/* Desktop Navigation - Center */}
           <div className="hidden md:flex items-center justify-center space-x-8">
-            <Link to="/" className="flex items-center space-x-2 text-gray-600 hover:text-primary h-10 px-4">
+            <Link 
+              to="/" 
+              className="flex items-center space-x-2 text-gray-600 hover:text-primary hover:bg-muted rounded-md h-10 px-4 transition-colors"
+            >
               <Home className="w-4 h-4" />
               <span>Home</span>
             </Link>
@@ -84,7 +86,9 @@ export const Navigation = () => {
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="flex items-center space-x-2 text-gray-600 hover:text-primary h-10 px-4">
+                  <NavigationMenuTrigger 
+                    className="flex items-center space-x-2 text-gray-600 hover:text-primary data-[state=open]:text-primary data-[state=open]:bg-transparent h-10 px-4"
+                  >
                     <Briefcase className="w-4 h-4" />
                     <span>Services</span>
                   </NavigationMenuTrigger>
@@ -95,7 +99,7 @@ export const Navigation = () => {
                           <Link
                             key={service.title}
                             to={service.href}
-                            className="flex items-start space-x-3 p-3 rounded-lg hover:bg-muted"
+                            className="flex items-start space-x-3 p-3 rounded-lg hover:bg-muted transition-colors"
                           >
                             <service.icon className="w-5 h-5 text-primary mt-1" />
                             <div>
@@ -113,7 +117,10 @@ export const Navigation = () => {
               </NavigationMenuList>
             </NavigationMenu>
 
-            <Link to="/contact" className="flex items-center space-x-2 text-gray-600 hover:text-primary h-10 px-4">
+            <Link 
+              to="/contact" 
+              className="flex items-center space-x-2 text-gray-600 hover:text-primary hover:bg-muted rounded-md h-10 px-4 transition-colors"
+            >
               <MessageSquare className="w-4 h-4" />
               <span>Contact</span>
             </Link>
