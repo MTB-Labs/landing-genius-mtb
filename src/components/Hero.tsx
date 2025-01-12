@@ -54,6 +54,16 @@ export const Hero = () => {
       name: "Rebuy",
       logo: "/lovable-uploads/135e00de-f5af-436a-8830-c783309fbb5c.png",
       delay: 0.5
+    },
+    {
+      name: "Vapi",
+      logo: "/lovable-uploads/d01101ff-1306-4b1e-b5ef-cf82a3b3d961.png",
+      delay: 0.6
+    },
+    {
+      name: "Yotpo",
+      logo: "/lovable-uploads/d973cfef-5d43-47a7-9b36-7c9f94be423f.png",
+      delay: 0.7
     }
   ];
 
@@ -155,11 +165,13 @@ export const Hero = () => {
                   }}
                   className="flex flex-col items-center space-y-2"
                 >
-                  <img 
-                    src={client.logo}
-                    alt={client.name}
-                    className="h-12 w-auto filter hover:brightness-110 transition-all duration-300"
-                  />
+                  <div className="w-auto h-12 flex items-center justify-center">
+                    <img 
+                      src={client.logo}
+                      alt={client.name}
+                      className="h-full w-auto object-contain filter hover:brightness-110 transition-all duration-300"
+                    />
+                  </div>
                   <span className="text-sm text-gray-600">{client.name}</span>
                 </motion.div>
               ))}
