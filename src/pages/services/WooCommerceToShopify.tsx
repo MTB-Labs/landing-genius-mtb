@@ -19,48 +19,40 @@ const features = [
 
 const pricingTiers = [
   {
-    name: "Standard Migration",
-    price: "$2,499",
-    description: "Perfect for small to medium-sized stores",
+    name: "Quick Launch",
+    price: "$15k",
+    description: "4-5 weeks. We'll work together and pick a theme that matches the brand and provide a full set-up with a tailored growth plan.",
     features: [
-      "Up to 10,000 products",
-      "Product data & images migration",
-      "Customer data migration",
-      "Order history migration",
-      "Basic 301 redirects setup",
-      "Basic theme setup",
-      "30 days of support"
+      "Shopify Premium Theme Setup",
+      "Customer and Product Data Migration",
+      "Klaviyo Setup - 3x Automation Flows",
+      "Reviews App Integration",
+      "Team Training"
     ]
   },
   {
-    name: "Premium Migration",
-    price: "$4,999",
-    description: "Ideal for larger stores with custom needs",
+    name: "Augmentation",
+    price: "$25k",
+    description: "6-8 weeks. Starting with a theme, you'll work side by side with our production to make changes add custom functionality that matches your business model.",
     features: [
-      "Up to 100,000 products",
-      "Full product data migration",
-      "Complete customer migration",
-      "Full order history transfer",
-      "Custom 301 redirects mapping",
-      "Advanced theme customization",
-      "Custom field mapping",
-      "60 days of priority support"
+      "Everything from 'Theme Installation'",
+      "Partial Design for 3 key pages",
+      "Custom Functionality",
+      "Addl. 3 Apps (e.g. Gorgias, ReCharge)",
+      "Klaviyo Setup 5x Automation Flows"
     ],
     highlight: true
   },
   {
-    name: "Enterprise Migration",
-    price: "Custom",
-    description: "For complex, high-volume stores",
+    name: "Fully Custom",
+    price: "POA",
+    description: "16-20 weeks. Fully custom website built from the ground up. We'll work together and pick a theme that matches the brand.",
     features: [
-      "Unlimited products",
-      "Custom data migration",
-      "Complex customer data transfer",
-      "Full historical data migration",
-      "Advanced SEO preservation",
-      "Custom integrations migration",
-      "Dedicated project manager",
-      "90 days of premium support"
+      "Dedicated UX Designer",
+      "Fully Custom Development",
+      "Custom Functionality",
+      "Fully Custom Development",
+      "Bloomreach or Klaviyo Integration"
     ]
   }
 ];
@@ -88,7 +80,7 @@ const WooCommerceToShopify = () => {
               </p>
               <Button asChild size="lg">
                 <Link to="/contact" className="inline-flex items-center">
-                  Start Your Migration
+                  Free Consultation
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
@@ -108,7 +100,7 @@ const WooCommerceToShopify = () => {
           </div>
         </div>
       </section>
-      
+
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
