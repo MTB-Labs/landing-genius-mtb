@@ -19,40 +19,40 @@ const features = [
 
 const pricingTiers = [
   {
-    name: "Hourly Rate / Retainer",
-    price: "$50 per hour",
-    description: "Need us to design new features or improve existing ones, we got you.",
+    name: "Essential Design",
+    price: "From $3,000",
+    description: "Perfect for startups and small businesses.",
     features: [
-      "Let's scope out what you need and create a plan of action",
-      "Minimum 20 hour engagement",
-      "UI/UX Design",
-      "Prototyping",
-      "Ongoing Support Available"
+      "5 Key Pages Design",
+      "Basic Design System",
+      "Mobile Responsive",
+      "2 Revision Rounds",
+      "Basic Prototype"
     ]
   },
   {
-    name: "Design Package",
-    price: "Starting from $2k",
-    description: "3-4 weeks. Perfect for businesses needing a design refresh or new feature designs.",
+    name: "Professional Design",
+    price: "From $7,000",
+    description: "Comprehensive design solution for growing businesses.",
     features: [
-      "User Research",
-      "Wireframing",
-      "Visual Design",
+      "Full Website Design",
+      "Complete Design System",
       "Interactive Prototypes",
-      "30 Days Support"
+      "Unlimited Revisions",
+      "User Testing"
     ],
     highlight: true
   },
   {
     name: "Enterprise Design",
-    price: "Starting from $4k",
-    description: "6-8 weeks. Comprehensive design solution for large-scale applications or websites.",
+    price: "Custom",
+    description: "Full-scale design transformation for large enterprises.",
     features: [
-      "In-depth User Research",
-      "Design System Creation",
       "Multi-platform Design",
-      "Advanced Prototyping",
-      "60 Days Priority Support"
+      "Advanced Design System",
+      "Custom Components",
+      "User Research & Testing",
+      "Design Team Training"
     ]
   }
 ];

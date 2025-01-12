@@ -19,40 +19,40 @@ const features = [
 
 const pricingTiers = [
   {
-    name: "Hourly Rate / Retainer",
-    price: "$50 per hour",
-    description: "Need us to implement specific CRO improvements or run tests, we got you.",
+    name: "Starter Package",
+    price: "$1,500/mo",
+    description: "Perfect for small businesses looking to start optimizing their conversion rates.",
     features: [
-      "Let's scope out what you need and create a plan of action",
-      "Minimum 20 hour engagement",
-      "A/B Testing Setup",
-      "Analytics Implementation",
-      "Ongoing Support Available"
+      "3 A/B Tests per month",
+      "Up to 5 pages optimization",
+      "2 Landing pages development",
+      "Basic Analytics Setup",
+      "Weekly Performance Reports"
     ]
   },
   {
     name: "Growth Package",
-    price: "Starting from $2.5k",
-    description: "4-6 weeks. Perfect for businesses looking to optimize their conversion rates and improve user experience.",
+    price: "$3,500/mo",
+    description: "Ideal for growing businesses seeking comprehensive CRO solutions.",
     features: [
-      "Comprehensive Site Analysis",
-      "User Behavior Tracking",
-      "A/B Testing Implementation",
-      "Conversion Funnel Optimization",
-      "30 Days Support"
+      "8 A/B Tests per month",
+      "Up to 15 pages optimization",
+      "4 Landing pages development",
+      "Advanced Analytics Integration",
+      "Heatmap & Session Recording"
     ],
     highlight: true
   },
   {
     name: "Enterprise Package",
-    price: "Starting from $5k",
-    description: "8-12 weeks. Complete CRO solution for large e-commerce stores with complex optimization needs.",
+    price: "Custom",
+    description: "For large businesses needing full-scale optimization and development.",
     features: [
-      "Advanced Analytics Setup",
-      "Multi-variant Testing",
-      "Personalization Strategy",
-      "Custom Reporting Dashboard",
-      "90 Days Priority Support"
+      "Unlimited A/B Tests",
+      "Full Website Optimization",
+      "Custom Landing Pages",
+      "Personalization Engine Setup",
+      "24/7 Priority Support"
     ]
   }
 ];

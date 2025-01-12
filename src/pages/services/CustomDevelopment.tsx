@@ -19,40 +19,40 @@ const features = [
 
 const pricingTiers = [
   {
-    name: "Hourly Rate / Retainer",
-    price: "$50 per hour",
-    description: "Need us to implement a new application or build a custom app, we got you.",
+    name: "Basic Development",
+    price: "From $5,000",
+    description: "For small to medium-sized development projects.",
     features: [
-      "Let's scope out what you need and create a plan of action",
-      "Minimum 20 hour engagement",
-      "Custom Development",
-      "Code Review",
-      "Ongoing Support Available"
+      "Custom Feature Development",
+      "3rd Party Integrations",
+      "Basic API Development",
+      "Code Documentation",
+      "30 Days Support"
     ]
   },
   {
-    name: "Custom Solution Package",
-    price: "Starting from $4k",
-    description: "6-8 weeks. Perfect for businesses needing tailored development solutions.",
+    name: "Advanced Development",
+    price: "From $10,000",
+    description: "For complex development projects requiring extensive customization.",
     features: [
-      "Custom Feature Development",
-      "Third-party Integrations",
-      "API Development",
+      "Full-stack Development",
+      "Complex Integrations",
+      "Advanced API Development",
       "Performance Optimization",
-      "60 Days Support"
+      "90 Days Support"
     ],
     highlight: true
   },
   {
-    name: "Enterprise Solution",
-    price: "Starting from $8k",
-    description: "12-16 weeks. Comprehensive development solution for complex enterprise requirements.",
+    name: "Enterprise Development",
+    price: "Custom",
+    description: "For large-scale enterprise applications and systems.",
     features: [
-      "Full-stack Development",
-      "Complex System Integration",
-      "Scalable Architecture",
-      "Security Implementation",
-      "90 Days Priority Support"
+      "Enterprise Architecture",
+      "Microservices Development",
+      "Custom Security Solutions",
+      "Scalable Infrastructure",
+      "1 Year Support & Maintenance"
     ]
   }
 ];

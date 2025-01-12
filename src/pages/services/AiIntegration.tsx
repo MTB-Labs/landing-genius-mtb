@@ -19,40 +19,40 @@ const features = [
 
 const pricingTiers = [
   {
-    name: "Hourly Rate / Retainer",
-    price: "$50 per hour",
-    description: "Need us to implement AI solutions or integrate machine learning models, we got you.",
+    name: "Basic AI Package",
+    price: "$2,500/mo",
+    description: "Essential AI features for e-commerce businesses.",
     features: [
-      "Let's scope out what you need and create a plan of action",
-      "Minimum 20 hour engagement",
-      "AI Integration Setup",
-      "Model Training Support",
-      "Ongoing Support Available"
+      "Basic Chatbot Implementation",
+      "Product Recommendation Engine",
+      "Customer Behavior Analysis",
+      "1 AI Model Integration",
+      "Monthly Maintenance"
     ]
   },
   {
-    name: "AI Starter Package",
-    price: "Starting from $3k",
-    description: "4-6 weeks. Ideal for businesses looking to implement basic AI functionality and automation.",
+    name: "Advanced AI Package",
+    price: "$5,000/mo",
+    description: "Comprehensive AI solutions for growing businesses.",
     features: [
-      "Chatbot Implementation",
-      "Basic Automation Setup",
-      "Product Recommendations",
-      "Performance Monitoring",
-      "30 Days Support"
+      "Advanced Chatbot with NLP",
+      "Dynamic Pricing System",
+      "Predictive Analytics",
+      "3 Custom AI Models",
+      "Weekly Optimization"
     ],
     highlight: true
   },
   {
-    name: "AI Enterprise Package",
-    price: "Starting from $6k",
-    description: "8-12 weeks. Advanced AI integration for businesses requiring sophisticated machine learning solutions.",
+    name: "Enterprise AI Package",
+    price: "Custom",
+    description: "Full-scale AI transformation for large enterprises.",
     features: [
-      "Custom AI Model Development",
-      "Advanced Automation",
-      "Predictive Analytics",
-      "Integration with Existing Systems",
-      "90 Days Priority Support"
+      "Custom AI Solution Development",
+      "Multi-model Integration",
+      "Real-time Analytics Dashboard",
+      "Unlimited AI Models",
+      "24/7 Support & Maintenance"
     ]
   }
 ];
