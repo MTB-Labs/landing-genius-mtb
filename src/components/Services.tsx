@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Code2, LineChart, Sparkles, ShoppingCart, BarChart3, Zap } from "lucide-react";
+import { Code2, LineChart, Sparkles, ShoppingCart, BarChart3, ArrowRightLeft } from "lucide-react";
 
 const services = [
   {
@@ -11,18 +11,18 @@ const services = [
     link: "/services/shopify-development"
   },
   {
+    icon: ArrowRightLeft,
+    title: "WooCommerce to Shopify",
+    description:
+      "Seamless migration service to move your WooCommerce store to Shopify with zero data loss and minimal downtime.",
+    link: "/services/woocommerce-to-shopify"
+  },
+  {
     icon: BarChart3,
     title: "CRO Optimization",
     description:
       "Data-driven conversion rate optimization strategies to maximize your e-commerce revenue and customer engagement.",
     link: "/services/cro-optimization"
-  },
-  {
-    icon: Zap,
-    title: "AI Integration",
-    description:
-      "Cutting-edge AI solutions for automation, personalization, and enhanced customer experiences.",
-    link: "/services/ai-integration"
   },
   {
     icon: Code2,
@@ -33,10 +33,10 @@ const services = [
   },
   {
     icon: LineChart,
-    title: "Analytics & Tracking",
+    title: "AI Integration",
     description:
-      "Advanced analytics setup and tracking implementation to make data-driven decisions.",
-    link: "/services/analytics-tracking"
+      "Cutting-edge AI solutions for automation, personalization, and enhanced customer experiences.",
+    link: "/services/ai-integration"
   },
   {
     icon: Sparkles,
