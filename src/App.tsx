@@ -13,6 +13,10 @@ import Tools from "./pages/Tools";
 import Contact from "./pages/Contact";
 import CroCalculator from "./pages/CroCalculator";
 import WhatsappGenerator from "./pages/WhatsappGenerator";
+import RoiCalculator from "./pages/RoiCalculator";
+import ImageResizer from "./pages/ImageResizer";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import ColorPalette from "./pages/ColorPalette";
 import ShopifyDevelopment from "./pages/services/ShopifyDevelopment";
 import CroOptimization from "./pages/services/CroOptimization";
 import AiIntegration from "./pages/services/AiIntegration";
@@ -39,6 +43,10 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/tools/cro-calculator" element={<CroCalculator />} />
           <Route path="/tools/whatsapp-generator" element={<WhatsappGenerator />} />
+          <Route path="/tools/roi-calculator" element={<RoiCalculator />} />
+          <Route path="/tools/image-resizer" element={<ImageResizer />} />
+          <Route path="/tools/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/tools/color-palette" element={<ColorPalette />} />
           <Route path="/services/shopify-development" element={<ShopifyDevelopment />} />
           <Route path="/services/cro-optimization" element={<CroOptimization />} />
           <Route path="/services/ai-integration" element={<AiIntegration />} />
