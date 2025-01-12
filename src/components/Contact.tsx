@@ -3,6 +3,8 @@ import { MessageSquare } from "lucide-react";
 import { useState } from "react";
 import { toast } from "@/hooks/use-toast";
 import { useSearchParams } from "react-router-dom";
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css';
 
 const services = [
   { value: "shopify-development", label: "Shopify Development" },
@@ -41,7 +43,8 @@ export const Contact = () => {
     email: '',
     websiteUrl: '',
     goals: '',
-    service: serviceFromUrl || 'cro-optimization'
+    service: serviceFromUrl || 'cro-optimization',
+    phoneNumber: ''
   });
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -49,6 +52,13 @@ export const Contact = () => {
     setFormData(prev => ({
       ...prev,
       [name]: value
+    }));
+  };
+
+  const handlePhoneChange = (value: string) => {
+    setFormData(prev => ({
+      ...prev,
+      phoneNumber: value
     }));
   };
 
@@ -100,7 +110,8 @@ export const Contact = () => {
       email: '',
       websiteUrl: '',
       goals: '',
-      service: serviceFromUrl || 'cro-optimization'
+      service: serviceFromUrl || 'cro-optimization',
+      phoneNumber: ''
     });
   };
 
@@ -154,6 +165,16 @@ export const Contact = () => {
                 className="w-full px-6 py-4 rounded-lg bg-white border border-border focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
                 required
               />
+              <div className="phone-input-container">
+                <PhoneInput
+                  country={'us'}
+                  value={formData.phoneNumber}
+                  onChange={handlePhoneChange}
+                  containerClass="w-full"
+                  inputClass="w-full px-6 py-4 rounded-lg bg-white border border-border focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
+                  buttonClass="!border-border !bg-white hover:!bg-gray-50"
+                />
+              </div>
               <input
                 type="url"
                 name="websiteUrl"
