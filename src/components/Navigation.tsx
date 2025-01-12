@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Home, Wrench, BookOpen, MessageSquare, Menu, X } from "lucide-react";
+import { Home, Wrench, BookOpen, MessageSquare, Menu, X, Briefcase } from "lucide-react";
 import { Button } from "./ui/button";
 
 export const Navigation = () => {
@@ -32,6 +32,10 @@ export const Navigation = () => {
               <Home className="w-4 h-4" />
               <span>Home</span>
             </Link>
+            <Link to="/services" className="flex items-center space-x-2 text-gray-600 hover:text-primary">
+              <Briefcase className="w-4 h-4" />
+              <span>Services</span>
+            </Link>
             <Link to="/tools" className="flex items-center space-x-2 text-gray-600 hover:text-primary">
               <Wrench className="w-4 h-4" />
               <span>Tools</span>
@@ -60,6 +64,14 @@ export const Navigation = () => {
             >
               <Home className="w-4 h-4" />
               <span>Home</span>
+            </Link>
+            <Link 
+              to="/services" 
+              className="flex items-center space-x-2 text-gray-600 hover:text-primary px-2 py-2 rounded-md"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <Briefcase className="w-4 h-4" />
+              <span>Services</span>
             </Link>
             <Link 
               to="/tools" 
