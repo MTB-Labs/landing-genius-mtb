@@ -88,8 +88,8 @@ export const Navigation = () => {
                     <span>Services</span>
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <div className="absolute left-1/2 transform -translate-x-1/2">
-                      <div className="grid grid-cols-2 gap-4 p-6 w-[600px] bg-white rounded-lg shadow-lg">
+                    <div className="w-[600px] bg-white rounded-lg shadow-lg p-6">
+                      <div className="grid grid-cols-2 gap-4">
                         {services.map((service) => (
                           <Link
                             key={service.title}
