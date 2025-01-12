@@ -1,7 +1,21 @@
 import { motion } from "framer-motion";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { ArrowRight, CheckCircle2, ShoppingCart } from "lucide-react";
 import { Pricing } from "@/components/Pricing";
+
+const features = [
+  "Custom Theme Development",
+  "Third-party App Integration",
+  "Payment Gateway Setup",
+  "Performance Optimization",
+  "Mobile-First Design",
+  "SEO Implementation",
+  "Security Features",
+  "Analytics Integration",
+];
 
 const pricingTiers = [
   {
@@ -13,7 +27,8 @@ const pricingTiers = [
       "Product Setup & Configuration",
       "Payment Gateway Integration",
       "Basic SEO Setup",
-      "Basic Training Session"
+      "Basic Training Session",
+      "30 Days Support"
     ]
   },
   {
@@ -25,6 +40,7 @@ const pricingTiers = [
       "Custom Functionality Development",
       "Advanced Apps Integration",
       "Performance Optimization",
+      "Advanced SEO Setup",
       "60 Days Support"
     ],
     highlight: true
@@ -34,10 +50,11 @@ const pricingTiers = [
     price: "Starting from $7.5k",
     description: "8-12 weeks. Comprehensive development solution for large stores with complex requirements.",
     features: [
-      "Dedicated Project Manager",
+      "Everything in Premium Development",
       "Custom Development",
       "Advanced Integrations",
       "Multi-currency Setup",
+      "Enterprise Security Features",
       "90 Days Priority Support"
     ]
   }
@@ -52,66 +69,75 @@ const ShopifyDevelopment = () => {
       className="min-h-screen bg-secondary"
     >
       <Navigation />
-      <div className="container mx-auto px-4 py-24">
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <h1 className="text-4xl font-bold mb-6">Shopify Development Services</h1>
-          <p className="text-lg text-gray-600 mb-8">
-            We specialize in creating custom Shopify solutions that drive growth and enhance your e-commerce presence. Our expert team delivers tailored development services to meet your unique business needs.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          <div className="bg-white p-8 rounded-2xl shadow-sm">
-            <h2 className="text-2xl font-bold mb-4">Why Choose Our Shopify Development Services?</h2>
-            <ul className="space-y-4">
-              <li className="flex items-start">
-                <span className="mr-3 text-primary">•</span>
-                <span>Expert Shopify developers with years of experience</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-3 text-primary">•</span>
-                <span>Custom solutions tailored to your business needs</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-3 text-primary">•</span>
-                <span>Focus on performance and user experience</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-3 text-primary">•</span>
-                <span>Ongoing support and maintenance</span>
-              </li>
-            </ul>
-          </div>
-          
-          <div className="bg-white p-8 rounded-2xl shadow-sm">
-            <h2 className="text-2xl font-bold mb-4">Our Development Process</h2>
-            <ul className="space-y-4">
-              <li className="flex items-start">
-                <span className="mr-3 text-primary">1.</span>
-                <span>Discovery and Requirements Analysis</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-3 text-primary">2.</span>
-                <span>Design and Development Planning</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-3 text-primary">3.</span>
-                <span>Implementation and Testing</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-3 text-primary">4.</span>
-                <span>Launch and Post-launch Support</span>
-              </li>
-            </ul>
+      
+      <section className="relative py-20 overflow-hidden bg-gradient-to-b from-primary/10 to-transparent">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">
+                Shopify Development Services
+              </h1>
+              <p className="text-lg text-gray-600 mb-8">
+                Custom Shopify solutions tailored to your unique business needs with a focus on performance and user experience.
+              </p>
+              <Button asChild size="lg">
+                <Link to="/contact" className="inline-flex items-center">
+                  Free Consultation
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              className="relative"
+            >
+              <div className="aspect-video bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg shadow-xl flex items-center justify-center">
+                <ShoppingCart className="w-24 h-24 text-primary/40" />
+              </div>
+            </motion.div>
           </div>
         </div>
+      </section>
 
-        <Pricing 
-          title="Shopify Development Packages"
-          description="Choose the package that best fits your business needs and goals"
-          tiers={pricingTiers}
-        />
-      </div>
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Comprehensive Shopify Solutions
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              We deliver end-to-end Shopify development services to help your business thrive in the digital marketplace.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <motion.div
+                key={feature}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                className="flex items-start space-x-4 p-6 rounded-lg bg-white shadow-sm"
+              >
+                <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0" />
+                <span className="text-gray-700">{feature}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <Pricing
+        title="Shopify Development Packages"
+        description="Select the development package that best fits your business needs"
+        tiers={pricingTiers}
+      />
+
       <Footer />
     </motion.div>
   );
