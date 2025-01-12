@@ -93,9 +93,9 @@ const WooCommerceToShopify = () => {
               className="relative"
             >
               <img
-                src="/placeholder.svg"
+                src="https://images.unsplash.com/photo-1531297484001-80022131f5a1"
                 alt="WooCommerce to Shopify Migration"
-                className="rounded-lg shadow-xl"
+                className="rounded-lg shadow-xl aspect-video object-cover"
               />
             </motion.div>
           </div>

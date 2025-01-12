@@ -92,9 +92,11 @@ const ShopifyDevelopment = () => {
               transition={{ duration: 0.5 }}
               className="relative"
             >
-              <div className="aspect-video bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg shadow-xl flex items-center justify-center">
-                <img src="/placeholder.svg" alt="Shopify Development" className="rounded-lg shadow-xl" />
-              </div>
+              <img
+                src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
+                alt="Shopify Development"
+                className="rounded-lg shadow-xl aspect-video object-cover"
+              />
             </motion.div>
           </div>
         </div>

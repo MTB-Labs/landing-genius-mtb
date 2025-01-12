@@ -107,9 +107,11 @@ const AiIntegration = () => {
               transition={{ duration: 0.5 }}
               className="relative"
             >
-              <div className="aspect-video bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg shadow-xl flex items-center justify-center">
-                <LineChart className="w-24 h-24 text-primary/40" />
-              </div>
+              <img
+                src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e"
+                alt="AI Integration"
+                className="rounded-lg shadow-xl aspect-video object-cover"
+              />
             </motion.div>
           </div>
         </div>

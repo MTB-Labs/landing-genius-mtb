@@ -89,9 +89,11 @@ const UiUxDesign = () => {
               transition={{ duration: 0.5 }}
               className="relative"
             >
-              <div className="aspect-video bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg shadow-xl flex items-center justify-center">
-                <Sparkles className="w-24 h-24 text-primary/40" />
-              </div>
+              <img
+                src="https://images.unsplash.com/photo-1483058712412-4245e9b90334"
+                alt="UI/UX Design"
+                className="rounded-lg shadow-xl aspect-video object-cover"
+              />
             </motion.div>
           </div>
         </div>
