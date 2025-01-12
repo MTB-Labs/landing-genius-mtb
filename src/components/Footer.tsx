@@ -11,10 +11,10 @@ export const Footer = () => {
             <h2 className="text-5xl font-bold mb-6">Want to start a project?</h2>
             <Link 
               to="/contact" 
-              className="inline-flex items-center text-2xl hover:text-[#9b87f5] transition-colors"
+              className="inline-flex items-center text-2xl hover:text-primary transition-colors"
             >
               Let's talk 
-              <span className="ml-4 w-8 h-8 rounded-full border border-[#9b87f5] flex items-center justify-center">
+              <span className="ml-4 w-8 h-8 rounded-full border border-primary flex items-center justify-center">
                 →
               </span>
             </Link>
@@ -29,25 +29,25 @@ export const Footer = () => {
             </p>
             
             <div className="space-y-6">
-              <h4 className="text-xl font-semibold text-[#D6BCFA]">eCommerce Services</h4>
+              <h4 className="text-xl font-semibold text-primary">eCommerce Services</h4>
               <ul className="space-y-3 text-gray-300">
                 <li>
-                  <Link to="/services/shopify-development" className="hover:text-[#9b87f5] transition-colors">
+                  <Link to="/services/shopify-development" className="hover:text-primary transition-colors">
                     Shopify Development
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services/ai-integration" className="hover:text-[#9b87f5] transition-colors">
+                  <Link to="/services/ai-integration" className="hover:text-primary transition-colors">
                     AI Integration
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services/cro-optimization" className="hover:text-[#9b87f5] transition-colors">
+                  <Link to="/services/cro-optimization" className="hover:text-primary transition-colors">
                     Conversion Rate Optimization
                   </Link>
                 </li>
                 <li>
-                  <Link to="/tools" className="hover:text-[#9b87f5] transition-colors">
+                  <Link to="/tools" className="hover:text-primary transition-colors">
                     Explore more tools with MTB Labs
                   </Link>
                 </li>
@@ -57,7 +57,7 @@ export const Footer = () => {
         </div>
         
         {/* Bottom Bar */}
-        <div className="border-t border-[#7E69AB] pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-primary/30 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm mb-4 md:mb-0">
             Copyright © MTB Labs | Web Development & AI Integration Partner
           </p>
@@ -66,7 +66,7 @@ export const Footer = () => {
               href="https://facebook.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-[#9b87f5] transition-colors"
+              className="text-gray-400 hover:text-primary transition-colors"
             >
               <Facebook className="w-5 h-5" />
             </a>
@@ -74,7 +74,7 @@ export const Footer = () => {
               href="https://linkedin.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-[#9b87f5] transition-colors"
+              className="text-gray-400 hover:text-primary transition-colors"
             >
               <Linkedin className="w-5 h-5" />
             </a>
