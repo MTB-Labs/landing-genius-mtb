@@ -83,27 +83,29 @@ export const Navigation = () => {
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="flex items-center space-x-2 text-gray-600 hover:text-primary">
+                  <NavigationMenuTrigger className="flex items-center space-x-2 text-gray-600 hover:text-primary data-[state=open]:text-primary data-[state=open]:bg-transparent">
                     <Briefcase className="w-4 h-4" />
                     <span>Services</span>
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <div className="grid grid-cols-2 gap-4 p-6 w-[600px]">
-                      {services.map((service) => (
-                        <Link
-                          key={service.title}
-                          to={service.href}
-                          className="flex items-start space-x-3 p-3 rounded-lg hover:bg-muted"
-                        >
-                          <service.icon className="w-5 h-5 text-primary mt-1" />
-                          <div>
-                            <div className="font-medium">{service.title}</div>
-                            <p className="text-sm text-muted-foreground">
-                              {service.description}
-                            </p>
-                          </div>
-                        </Link>
-                      ))}
+                    <div className="absolute left-1/2 transform -translate-x-1/2">
+                      <div className="grid grid-cols-2 gap-4 p-6 w-[600px] bg-white rounded-lg shadow-lg">
+                        {services.map((service) => (
+                          <Link
+                            key={service.title}
+                            to={service.href}
+                            className="flex items-start space-x-3 p-3 rounded-lg hover:bg-muted"
+                          >
+                            <service.icon className="w-5 h-5 text-primary mt-1" />
+                            <div>
+                              <div className="font-medium">{service.title}</div>
+                              <p className="text-sm text-muted-foreground">
+                                {service.description}
+                              </p>
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
                     </div>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
