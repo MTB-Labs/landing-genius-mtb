@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
 import { toast } from "@/hooks/use-toast";
 import { ArrowRight } from "lucide-react";
 
 export const Hero = () => {
-  const navigate = useNavigate();
-
   const handleGetStarted = () => {
-    navigate('/contact?service=cro-optimization');
+    const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
     toast({
       title: "Let's get started!",
       description: "Fill out the form below for your free CRO audit.",
