@@ -175,6 +175,7 @@ const UiUxDesign = () => {
         title="Design Packages"
         description="Choose the right design package for your business needs"
         tiers={pricingTiers}
+        service="ui-ux-design"
       />
 
       <Footer />

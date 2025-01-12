@@ -15,9 +15,10 @@ interface PricingProps {
   title: string;
   description: string;
   tiers: PricingTier[];
+  service?: string;
 }
 
-export const Pricing = ({ title, description, tiers }: PricingProps) => {
+export const Pricing = ({ title, description, tiers, service = "cro-optimization" }: PricingProps) => {
   return (
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -62,7 +63,7 @@ export const Pricing = ({ title, description, tiers }: PricingProps) => {
                 className="w-full"
                 variant={tier.highlight ? "secondary" : "default"}
               >
-                <Link to="/contact">Get Started</Link>
+                <Link to={`/contact?service=${service}`}>Get Started</Link>
               </Button>
             </motion.div>
           ))}

@@ -179,6 +179,7 @@ const WooCommerceToShopify = () => {
         title="Migration Packages"
         description="Choose the right migration package for your business size and needs"
         tiers={pricingTiers}
+        service="woocommerce-to-shopify"
       />
 
       <Footer />

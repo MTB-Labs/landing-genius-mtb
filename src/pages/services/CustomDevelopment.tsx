@@ -175,6 +175,7 @@ const CustomDevelopment = () => {
         title="Development Packages"
         description="Choose the right development package for your business needs"
         tiers={pricingTiers}
+        service="custom-development"
       />
 
       <Footer />

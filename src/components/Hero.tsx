@@ -7,10 +7,7 @@ export const Hero = () => {
   const navigate = useNavigate();
 
   const handleGetStarted = () => {
-    const element = document.getElementById('contact');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    navigate('/contact?service=cro-optimization');
     toast({
       title: "Let's get started!",
       description: "Fill out the form below for your free CRO audit.",
@@ -75,6 +72,7 @@ export const Hero = () => {
           </main>
         </div>
       </div>
+      
       <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
         <div className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full bg-gradient-to-br from-primary/20 to-primary/5">
           <div className="h-full w-full flex items-center justify-center">

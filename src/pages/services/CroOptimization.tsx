@@ -184,6 +184,7 @@ const CroOptimization = () => {
         title="CRO Service Packages"
         description="Choose the right CRO package for your business needs"
         tiers={pricingTiers}
+        service="cro-optimization"
       />
 
       <Footer />

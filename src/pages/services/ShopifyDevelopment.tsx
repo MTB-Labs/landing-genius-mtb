@@ -3,7 +3,7 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle2, ShoppingCart } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Pricing } from "@/components/Pricing";
 
 const features = [
@@ -90,7 +90,7 @@ const ShopifyDevelopment = () => {
               className="relative"
             >
               <div className="aspect-video bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg shadow-xl flex items-center justify-center">
-                <ShoppingCart className="w-24 h-24 text-primary/40" />
+                <img src="/placeholder.svg" alt="Shopify Development" className="rounded-lg shadow-xl" />
               </div>
             </motion.div>
           </div>
@@ -128,6 +128,7 @@ const ShopifyDevelopment = () => {
         title="Development Packages"
         description="Choose the right development package that best fits your business needs"
         tiers={pricingTiers}
+        service="shopify-development"
       />
 
       <Footer />
