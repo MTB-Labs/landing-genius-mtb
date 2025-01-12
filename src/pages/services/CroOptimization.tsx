@@ -21,37 +21,45 @@ const pricingTiers = [
   {
     name: "Starter Package",
     price: "$1,500/mo",
-    description: "Perfect for small businesses looking to start optimizing their conversion rates.",
+    description: "Essential CRO package for small businesses looking to start optimizing their conversion rates.",
     features: [
-      "3 A/B Tests per month",
-      "Up to 5 pages optimization",
-      "2 Landing pages development",
+      "1 A/B Test at a time",
+      "Up to 2 pages optimization",
+      "1 Landing page development per month",
       "Basic Analytics Setup",
-      "Weekly Performance Reports"
+      "Weekly Performance Reports",
+      "Heatmap Analysis",
+      "User Behavior Tracking"
     ]
   },
   {
     name: "Growth Package",
     price: "$3,500/mo",
-    description: "Ideal for growing businesses seeking comprehensive CRO solutions.",
+    description: "Comprehensive CRO solution for growing businesses seeking significant conversion improvements.",
     features: [
-      "8 A/B Tests per month",
-      "Up to 15 pages optimization",
-      "4 Landing pages development",
+      "2 A/B Tests running simultaneously",
+      "Up to 5 pages optimization",
+      "2 Landing pages per month",
       "Advanced Analytics Integration",
-      "Heatmap & Session Recording"
+      "Heatmap & Session Recording",
+      "Conversion Funnel Analysis",
+      "Monthly Strategy Sessions",
+      "Priority Support"
     ],
     highlight: true
   },
   {
     name: "Enterprise Package",
     price: "Custom",
-    description: "For large businesses needing full-scale optimization and development.",
+    description: "Full-scale optimization and development for large businesses with complex needs.",
     features: [
-      "Unlimited A/B Tests",
+      "3 A/B Tests running simultaneously",
       "Full Website Optimization",
-      "Custom Landing Pages",
-      "Personalization Engine Setup",
+      "3 Landing pages per month",
+      "Custom Analytics Dashboard",
+      "Advanced Personalization",
+      "Dedicated CRO Specialist",
+      "Weekly Strategy Sessions",
       "24/7 Priority Support"
     ]
   }
