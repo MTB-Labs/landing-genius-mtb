@@ -4,12 +4,12 @@ import { ArrowRight } from "lucide-react";
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
 const data = [
-  { year: '2019', growth: 2.3 },
-  { year: '2020', growth: -3.4 },
-  { year: '2021', growth: 5.7 },
-  { year: '2022', growth: 2.1 },
-  { year: '2023', growth: 2.5 },
-  { year: '2024', growth: 3.1 },
+  { year: '2019', revenue: 100000 },
+  { year: '2020', revenue: 150000 },
+  { year: '2021', revenue: 250000 },
+  { year: '2022', revenue: 400000 },
+  { year: '2023', revenue: 600000 },
+  { year: '2024', revenue: 1000000 },
 ];
 
 export const Hero = () => {
@@ -122,15 +122,19 @@ export const Hero = () => {
                   >
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis dataKey="year" />
-                    <YAxis />
-                    <Tooltip />
+                    <YAxis 
+                      tickFormatter={(value) => `$${value.toLocaleString()}`}
+                    />
+                    <Tooltip 
+                      formatter={(value) => [`$${value.toLocaleString()}`, 'Revenue']}
+                    />
                     <Area 
                       type="monotone" 
-                      dataKey="growth" 
+                      dataKey="revenue" 
                       stroke="#B85C38" 
                       fill="#B85C38" 
                       fillOpacity={0.3}
-                      name="Economic Growth (%)"
+                      name="Annual Revenue"
                     />
                   </AreaChart>
                 </ResponsiveContainer>
