@@ -57,7 +57,8 @@ export const Navigation = () => {
     <nav className="sticky top-0 z-50 bg-white shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="flex items-center">
+          {/* Logo - Left */}
+          <Link to="/" className="flex-shrink-0">
             <img 
               src="/lovable-uploads/7537b699-7205-4677-8d03-4ef5a0b4b3b8.png" 
               alt="MTB Labs" 
@@ -73,49 +74,55 @@ export const Navigation = () => {
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="flex items-center space-x-2 text-gray-600 hover:text-primary">
-              <Home className="w-4 h-4" />
-              <span>Home</span>
-            </Link>
-            
-            <NavigationMenu>
-              <NavigationMenuList>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger className="flex items-center space-x-2 text-gray-600 hover:text-primary data-[state=open]:text-primary data-[state=open]:bg-transparent">
-                    <Briefcase className="w-4 h-4" />
-                    <span>Services</span>
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <div className="relative w-[600px] bg-white rounded-lg shadow-lg p-6 left-1/2 -translate-x-1/2">
-                      <div className="grid grid-cols-2 gap-4">
-                        {services.map((service) => (
-                          <Link
-                            key={service.title}
-                            to={service.href}
-                            className="flex items-start space-x-3 p-3 rounded-lg hover:bg-muted"
-                          >
-                            <service.icon className="w-5 h-5 text-primary mt-1" />
-                            <div>
-                              <div className="font-medium">{service.title}</div>
-                              <p className="text-sm text-muted-foreground">
-                                {service.description}
-                              </p>
-                            </div>
-                          </Link>
-                        ))}
+          {/* Desktop Navigation - Center */}
+          <div className="hidden md:flex items-center justify-center flex-1 mx-8">
+            <div className="flex items-center space-x-8">
+              <Link to="/" className="flex items-center space-x-2 text-gray-600 hover:text-primary">
+                <Home className="w-4 h-4" />
+                <span>Home</span>
+              </Link>
+              
+              <NavigationMenu>
+                <NavigationMenuList>
+                  <NavigationMenuItem>
+                    <NavigationMenuTrigger className="flex items-center space-x-2 text-gray-600 hover:text-primary data-[state=open]:text-primary data-[state=open]:bg-transparent">
+                      <Briefcase className="w-4 h-4" />
+                      <span>Services</span>
+                    </NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                      <div className="w-[600px] bg-white rounded-lg shadow-lg p-6">
+                        <div className="grid grid-cols-2 gap-4">
+                          {services.map((service) => (
+                            <Link
+                              key={service.title}
+                              to={service.href}
+                              className="flex items-start space-x-3 p-3 rounded-lg hover:bg-muted"
+                            >
+                              <service.icon className="w-5 h-5 text-primary mt-1" />
+                              <div>
+                                <div className="font-medium">{service.title}</div>
+                                <p className="text-sm text-muted-foreground">
+                                  {service.description}
+                                </p>
+                              </div>
+                            </Link>
+                          ))}
+                        </div>
                       </div>
-                    </div>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+                </NavigationMenuList>
+              </NavigationMenu>
 
-            <Link to="/contact" className="flex items-center space-x-2 text-gray-600 hover:text-primary">
-              <MessageSquare className="w-4 h-4" />
-              <span>Contact</span>
-            </Link>
+              <Link to="/contact" className="flex items-center space-x-2 text-gray-600 hover:text-primary">
+                <MessageSquare className="w-4 h-4" />
+                <span>Contact</span>
+              </Link>
+            </div>
+          </div>
+
+          {/* CTA - Right */}
+          <div className="hidden md:block flex-shrink-0">
             <Button asChild variant="default" size="sm">
               <Link to="/contact">Get Started</Link>
             </Button>
