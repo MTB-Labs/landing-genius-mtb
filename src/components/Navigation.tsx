@@ -75,55 +75,53 @@ export const Navigation = () => {
           </button>
 
           {/* Desktop Navigation - Center */}
-          <div className="hidden md:flex items-center justify-center flex-1 mx-8">
-            <div className="flex items-center space-x-8">
-              <Link to="/" className="flex items-center space-x-2 text-gray-600 hover:text-primary">
-                <Home className="w-4 h-4" />
-                <span>Home</span>
-              </Link>
-              
-              <NavigationMenu>
-                <NavigationMenuList>
-                  <NavigationMenuItem>
-                    <NavigationMenuTrigger className="flex items-center space-x-2 text-gray-600 hover:text-primary data-[state=open]:text-primary data-[state=open]:bg-transparent">
-                      <Briefcase className="w-4 h-4" />
-                      <span>Services</span>
-                    </NavigationMenuTrigger>
-                    <NavigationMenuContent>
-                      <div className="w-[600px] bg-white rounded-lg shadow-lg p-6">
-                        <div className="grid grid-cols-2 gap-4">
-                          {services.map((service) => (
-                            <Link
-                              key={service.title}
-                              to={service.href}
-                              className="flex items-start space-x-3 p-3 rounded-lg hover:bg-muted"
-                            >
-                              <service.icon className="w-5 h-5 text-primary mt-1" />
-                              <div>
-                                <div className="font-medium">{service.title}</div>
-                                <p className="text-sm text-muted-foreground">
-                                  {service.description}
-                                </p>
-                              </div>
-                            </Link>
-                          ))}
-                        </div>
+          <div className="hidden md:flex items-center justify-center space-x-8">
+            <Link to="/" className="flex items-center space-x-2 text-gray-600 hover:text-primary h-10 px-4">
+              <Home className="w-4 h-4" />
+              <span>Home</span>
+            </Link>
+            
+            <NavigationMenu>
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="flex items-center space-x-2 text-gray-600 hover:text-primary h-10 px-4">
+                    <Briefcase className="w-4 h-4" />
+                    <span>Services</span>
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <div className="w-[600px] bg-white rounded-lg shadow-lg p-6">
+                      <div className="grid grid-cols-2 gap-4">
+                        {services.map((service) => (
+                          <Link
+                            key={service.title}
+                            to={service.href}
+                            className="flex items-start space-x-3 p-3 rounded-lg hover:bg-muted"
+                          >
+                            <service.icon className="w-5 h-5 text-primary mt-1" />
+                            <div>
+                              <div className="font-medium">{service.title}</div>
+                              <p className="text-sm text-muted-foreground">
+                                {service.description}
+                              </p>
+                            </div>
+                          </Link>
+                        ))}
                       </div>
-                    </NavigationMenuContent>
-                  </NavigationMenuItem>
-                </NavigationMenuList>
-              </NavigationMenu>
+                    </div>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
 
-              <Link to="/contact" className="flex items-center space-x-2 text-gray-600 hover:text-primary">
-                <MessageSquare className="w-4 h-4" />
-                <span>Contact</span>
-              </Link>
-            </div>
+            <Link to="/contact" className="flex items-center space-x-2 text-gray-600 hover:text-primary h-10 px-4">
+              <MessageSquare className="w-4 h-4" />
+              <span>Contact</span>
+            </Link>
           </div>
 
           {/* CTA - Right */}
-          <div className="hidden md:block flex-shrink-0">
-            <Button asChild variant="default" size="sm">
+          <div className="hidden md:block">
+            <Button asChild variant="default" size="default">
               <Link to="/contact">Get Started</Link>
             </Button>
           </div>
