@@ -20,33 +20,49 @@ const features = [
 const pricingTiers = [
   {
     name: "Starter Package",
-    price: "$2,500/mo",
-    description: "Essential CRO package for businesses looking to improve their conversion rates with data-driven decisions.",
+    price: "$1,500/mo",
+    description: "Perfect for businesses starting their CRO journey with data-driven optimization.",
     features: [
-      "2 A/B Tests running simultaneously",
+      "1 A/B Test at a time",
       "Up to 2 pages optimization",
       "Basic Analytics Setup",
       "Heatmap & Session Recording",
       "User Behavior Tracking",
-      "Weekly Performance Reports",
-      "Monthly Strategy Session"
+      "Monthly Performance Report",
+      "Email Support",
+      "Quarterly Strategy Session"
     ]
   },
   {
     name: "Growth Package",
-    price: "$4,500/mo",
-    description: "Advanced CRO solution with custom development capabilities for growing businesses.",
+    price: "$2,000/mo",
+    description: "Ideal for growing businesses ready to accelerate their conversion optimization.",
     features: [
-      "3 A/B Tests running simultaneously",
+      "2 A/B Tests simultaneously",
       "Up to 3 pages optimization",
-      "Custom Development Tasks",
       "Advanced Analytics Integration",
       "Conversion Funnel Analysis",
-      "Weekly Strategy Sessions",
-      "Priority Support",
-      "Dedicated CRO Specialist"
+      "Priority Email Support",
+      "Monthly Strategy Sessions",
+      "Basic Custom Development",
+      "Weekly Performance Reports"
     ],
     highlight: true
+  },
+  {
+    name: "Scale Package",
+    price: "$3,000/mo",
+    description: "Comprehensive solution for businesses seeking maximum conversion impact.",
+    features: [
+      "3 A/B Tests simultaneously",
+      "Up to 4 pages optimization",
+      "Custom Analytics Dashboard",
+      "Advanced Custom Development",
+      "Dedicated CRO Specialist",
+      "Weekly Strategy Sessions",
+      "Priority 24/5 Support",
+      "Personalization Features"
+    ]
   }
 ];
 
