@@ -33,10 +33,10 @@ export const Hero = () => {
   const scrollClients = [...clients, ...clients];
 
   return (
-    <section className="relative bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto">
+    <section className="relative bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
-          <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+          <main className="mt-10 mx-auto max-w-7xl sm:mt-12 md:mt-16 lg:mt-20 xl:mt-28">
             <div className="sm:text-center lg:text-left">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -50,7 +50,7 @@ export const Hero = () => {
                   <span className="block">Transform Your</span>
                   <span className="block text-primary">E-commerce Growth</span>
                 </h1>
-                <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto lg:mx-0">
+                <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl">
                   We specialize in Shopify development, CRO optimization, and AI integrations 
                   to help your business reach its full potential.
                 </p>
