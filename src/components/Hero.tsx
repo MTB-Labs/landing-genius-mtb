@@ -1,6 +1,16 @@
 import { motion } from "framer-motion";
 import { toast } from "@/hooks/use-toast";
-import { ArrowRight, ShoppingBag, BarChart, Brain } from "lucide-react";
+import { 
+  ArrowRight, 
+  Mail, // Klaviyo
+  ShoppingBag, // Shopify
+  Brain, // Intelligems
+  Building2, // GoHighLevel
+  Cloud, // Vapi
+  ShoppingCart, // BuyWithPrime
+  RefreshCw, // Rebuy
+  Star // Yotpo
+} from "lucide-react";
 
 export const Hero = () => {
   const handleGetStarted = () => {
@@ -16,20 +26,45 @@ export const Hero = () => {
 
   const clients = [
     { 
-      name: "Shopify Plus",
-      icon: ShoppingBag,
+      name: "Klaviyo Partners",
+      icon: Mail,
       delay: 0
     },
     { 
-      name: "BigCommerce",
-      icon: BarChart,
+      name: "Shopify Partners",
+      icon: ShoppingBag,
+      delay: 0.1
+    },
+    { 
+      name: "Intelligems",
+      icon: Brain,
       delay: 0.2
     },
     { 
-      name: "WooCommerce",
-      icon: Brain,
+      name: "GoHighLevel",
+      icon: Building2,
+      delay: 0.3
+    },
+    { 
+      name: "Vapi",
+      icon: Cloud,
       delay: 0.4
     },
+    { 
+      name: "BuyWithPrime",
+      icon: ShoppingCart,
+      delay: 0.5
+    },
+    { 
+      name: "Rebuy",
+      icon: RefreshCw,
+      delay: 0.6
+    },
+    { 
+      name: "Yotpo",
+      icon: Star,
+      delay: 0.7
+    }
   ];
 
   // Duplicate the clients array for infinite scroll
