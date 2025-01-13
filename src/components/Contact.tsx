@@ -136,7 +136,14 @@ export const Contact = () => {
                 <div>
                   <h3 className="font-semibold mb-1">Need immediate help?</h3>
                   <p className="text-muted-foreground">
-                    Chat with us on WhatsApp for quick assistance
+                    <a 
+                      href="https://wa.me/51933038683" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="hover:text-primary transition-colors"
+                    >
+                      Chat with us on WhatsApp for quick assistance
+                    </a>
                   </p>
                 </div>
               </div>
