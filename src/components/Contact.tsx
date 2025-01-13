@@ -137,7 +137,7 @@ export const Contact = () => {
                   <h3 className="font-semibold mb-1">Need immediate help?</h3>
                   <p className="text-muted-foreground">
                     <a 
-                      href="https://wa.me/51933038683" 
+                      href="https://wa.me/51933038683?text=Hi!%20I'm%20interested%20in%20your%20services.%20Can%20you%20help%20me?" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="hover:text-primary transition-colors"
