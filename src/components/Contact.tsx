@@ -39,6 +39,7 @@ export const Contact = () => {
   const serviceFromUrl = searchParams.get("service");
 
   const [formData, setFormData] = useState({
+    fullName: '',
     businessName: '',
     email: '',
     websiteUrl: '',
@@ -66,7 +67,7 @@ export const Contact = () => {
     e.preventDefault();
     
     // Basic validation
-    if (!formData.businessName || !formData.email || !formData.websiteUrl) {
+    if (!formData.fullName || !formData.businessName || !formData.email || !formData.websiteUrl) {
       toast({
         title: "Missing Information",
         description: "Please fill in all required fields.",
@@ -106,6 +107,7 @@ export const Contact = () => {
 
     // Reset form
     setFormData({
+      fullName: '',
       businessName: '',
       email: '',
       websiteUrl: '',
@@ -154,6 +156,15 @@ export const Contact = () => {
               className="space-y-6"
               onSubmit={handleSubmit}
             >
+              <input
+                type="text"
+                name="fullName"
+                value={formData.fullName}
+                onChange={handleInputChange}
+                placeholder="Full Name"
+                className="w-full px-6 py-4 rounded-lg bg-white border border-border focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
+                required
+              />
               <input
                 type="text"
                 name="businessName"
