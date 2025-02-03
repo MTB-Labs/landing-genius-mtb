@@ -7,9 +7,10 @@ import { FormData, services } from "./types";
 
 interface ContactFormProps {
   initialService?: string;
+  onServiceChange?: (service: string) => void;
 }
 
-export const ContactForm = ({ initialService }: ContactFormProps) => {
+export const ContactForm = ({ initialService, onServiceChange }: ContactFormProps) => {
   const [formData, setFormData] = useState<FormData>({
     fullName: '',
     businessName: '',
@@ -26,6 +27,10 @@ export const ContactForm = ({ initialService }: ContactFormProps) => {
       ...prev,
       [name]: value
     }));
+
+    if (name === 'service' && onServiceChange) {
+      onServiceChange(value);
+    }
   };
 
   const handlePhoneChange = (value: string) => {
