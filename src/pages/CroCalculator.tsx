@@ -73,11 +73,18 @@ const CroCalculator = () => {
               </p>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-6 bg-white p-8 rounded-lg shadow-sm">
+            <form 
+              onSubmit={handleSubmit} 
+              className="space-y-6 bg-white p-8 rounded-lg shadow-sm"
+              data-netlify="true"
+              name="cro-calculator"
+            >
+              <input type="hidden" name="form-name" value="cro-calculator" />
               <div>
                 <label className="block text-sm font-medium mb-2">Monthly Traffic</label>
                 <Input
                   type="number"
+                  name="traffic"
                   placeholder="e.g. 10000"
                   value={formData.traffic}
                   onChange={(e) => setFormData({ ...formData, traffic: e.target.value })}
@@ -89,6 +96,7 @@ const CroCalculator = () => {
                 <label className="block text-sm font-medium mb-2">Current Conversion Rate (%)</label>
                 <Input
                   type="number"
+                  name="conversionRate"
                   step="0.01"
                   placeholder="e.g. 2.5"
                   value={formData.conversionRate}
@@ -101,6 +109,7 @@ const CroCalculator = () => {
                 <label className="block text-sm font-medium mb-2">Average Order Value ($)</label>
                 <Input
                   type="number"
+                  name="averageOrderValue"
                   step="0.01"
                   placeholder="e.g. 75"
                   value={formData.averageOrderValue}
@@ -113,6 +122,7 @@ const CroCalculator = () => {
                 <label className="block text-sm font-medium mb-2">Email Address</label>
                 <Input
                   type="email"
+                  name="email"
                   placeholder="your@email.com"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}

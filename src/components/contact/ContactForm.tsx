@@ -100,7 +100,10 @@ export const ContactForm = ({ initialService, onServiceChange }: ContactFormProp
       whileInView={{ opacity: 1, y: 0 }}
       className="space-y-6"
       onSubmit={handleSubmit}
+      data-netlify="true"
+      name="contact"
     >
+      <input type="hidden" name="form-name" value="contact" />
       <input
         type="text"
         name="fullName"
