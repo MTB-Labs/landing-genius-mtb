@@ -28,8 +28,7 @@ export const Footer = () => {
               className="h-8 w-auto"
             />
             <p className="text-muted-foreground mb-8 max-w-lg">
-              Elevating businesses with innovative digital solutions in the $1M-$20M ARR bracket. 
-              Our expertise lies in Web Development, Conversion Rate Enhancement, and AI Integration.
+              Elevating businesses with innovative digital solutions. Our expertise lies in Web Development, Conversion Rate Enhancement, and AI Integration.
             </p>
             
             <div className="space-y-6">
